@@ -12,8 +12,8 @@
 </head>
 
 <body>
-    <section class="bg-black w-full">
-        <div class="container mx-auto py-2 flex justify-between">
+    <section class="bg-neutral-900 w-full">
+        <div class="max-w-screen-xl mx-auto py-2 flex justify-between">
             <div class="w-4/12 flex justify-between">
                 <?php
                 $link = get_field('link_1', 'option');
@@ -28,7 +28,7 @@
                 if ($link2) :
                     $link2_url = $link2['url'];
                     $link2_title = $link2['title'];
-                    $link2_target = $link2['target'] ? $link['target'] : '_self';
+                    $link2_target = $link2['target'] ? $link2['target'] : '_self';
                 ?>
                     <a class="text-white text-sm" href="<?php echo esc_url($link2_url); ?>" target="<?php echo esc_attr($link2_target); ?>"><?php echo esc_html($link2_title); ?></a>
                 <?php endif; ?>
@@ -55,7 +55,7 @@
         </div>
     </section>
 
-    <header class="container mx-auto py-5 flex justify-between">
+    <header class="max-w-screen-xl mx-auto py-5 flex justify-between">
         <a href="<?php echo get_home_url(); ?>" class="w-3/12">
             LOGO
         </a>
