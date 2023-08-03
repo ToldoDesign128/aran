@@ -41,6 +41,8 @@ add_action('wp_enqueue_scripts', 'add_aran_scripts');
 
 // Functions part
 require dirname(__FILE__) . '/functions-part/customize-back.php';
+require dirname(__FILE__) . '/functions-part/cpt-arredo.php';
+require dirname(__FILE__) . '/functions-part/cpt-living.php';
 
 /*ADD ACF Option Page*/
 if (function_exists('acf_add_options_page')) {
