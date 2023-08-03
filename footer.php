@@ -4,16 +4,22 @@
     <section class="bg-neutral-900 flex">
 
         <!-- Contatti -->
-        <div id="contatti-footer" class="w-6/12 flex flex-col py-10 pr-10">
-            <h5 class="text-white text-4xl font-serif"><?php echo esc_html(get_field('testo_footer', 'option'));?></h5>
-            <?php
+        <div class="w-6/12 flex flex-col py-14">
+            
+        <!-- Testo -->
+            <h5 class="contatti-footer w-8/12 text-white text-5xl font-serif uppercase my-5"><?php echo esc_html(get_field('testo_footer', 'option'));?></h5>
+        
+            <!-- Telefono -->
+        <?php
             $telefono = get_field('telefono_footer', 'option');
             if ($telefono) :
                 $telefono_url = $telefono['url'];
                 $telefono_title = $telefono['title'];
                 $telefono_target = $telefono['target'] ? $telefono['target'] : '_self';
             ?>
-                <a class="text-white text-3xl font-serif" href="<?php echo esc_url($telefono_url); ?>" target="<?php echo esc_attr($telefono_target); ?>"><?php echo esc_html($telefono_title); ?></a>
+                <a class="contatti-footer w-8/12 text-white text-3xl font-serif my-5" href="<?php echo esc_url($telefono_url); ?>" target="<?php echo esc_attr($telefono_target); ?>"><?php echo esc_html($telefono_title); ?></a>
+            
+            <!-- Mail -->
             <?php endif; 
             $mail = get_field('mail_footer', 'option');
             if ($mail) :
@@ -21,7 +27,9 @@
                 $mail_title = $mail['title'];
                 $mail_target = $mail['target'] ? $mail['target'] : '_self';
             ?>
-                <a class="text-white text-3xl font-serif" href="<?php echo esc_url($mail_url); ?>" target="<?php echo esc_attr($mail_target); ?>"><?php echo esc_html($mail_title); ?></a>
+                <a class="contatti-footer w-8/12 text-white text-3xl font-serif my-5" href="<?php echo esc_url($mail_url); ?>" target="<?php echo esc_attr($mail_target); ?>"><?php echo esc_html($mail_title); ?></a>
+            
+            <!-- Indirizzo -->
             <?php endif;
             $indirizzo = get_field('indirizzo_footer', 'option');
             if ($indirizzo) :
@@ -29,7 +37,9 @@
                 $indirizzo_title = $indirizzo['title'];
                 $indirizzo_target = $indirizzo['target'] ? $indirizzo['target'] : '_self';
             ?>
-                <a class="text-white text-3xl font-serif" href="<?php echo esc_url($indirizzo_url); ?>" target="<?php echo esc_attr($indirizzo_target); ?>"><?php echo esc_html($indirizzo_title); ?></a>
+                <a class="contatti-footer w-5/12 text-white text-3xl font-serif my-5" href="<?php echo esc_url($indirizzo_url); ?>" target="<?php echo esc_attr($indirizzo_target); ?>"><?php echo esc_html($indirizzo_title); ?></a>
+            
+            <!-- Cta -->
             <?php endif; 
             $pulsante = get_field('pulsante_footer', 'option');
             if ($pulsante) :
@@ -37,13 +47,13 @@
                 $pulsante_title = $pulsante['title'];
                 $pulsante_target = $pulsante['target'] ? $pulsante['target'] : '_self';
             ?>
-                <a class="text-white text-sm" href="<?php echo esc_url($pulsante_url); ?>" target="<?php echo esc_attr($pulsante_target); ?>"><?php echo esc_html($pulsante_title); ?></a>
+                <a class="contatti-footer w-max text-white text-sm uppercase tracking-wider my-5 py-4 px-8 border border-white" href="<?php echo esc_url($pulsante_url); ?>" target="<?php echo esc_attr($pulsante_target); ?>"><?php echo esc_html($pulsante_title); ?></a>
             <?php endif; ?>
         </div>
 
         <!-- Mappa -->
         <div class="w-6/12">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2769.0720148918317!2d11.130705799999998!3d46.04966179999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4782741d5e116d57%3A0xee0e7b4b1bdc04e4!2sVia%20Enrico%20Fermi%2C%2070%2C%2038123%20Trento%20TN!5e0!3m2!1sit!2sit!4v1690903869500!5m2!1sit!2sit" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2769.0720148918317!2d11.130705799999998!3d46.04966179999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4782741d5e116d57%3A0xee0e7b4b1bdc04e4!2sVia%20Enrico%20Fermi%2C%2070%2C%2038123%20Trento%20TN!5e0!3m2!1sit!2sit!4v1690903869500!5m2!1sit!2sit" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
 
