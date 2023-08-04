@@ -14,13 +14,11 @@ function aran_setup()
 
     // image size
     if (function_exists('add_image_size')) {
-        add_image_size('xsmall', 100, 100, true);
-        add_image_size('small', 150, 150, true);
-        add_image_size('medium', 300, 300, true);
-        add_image_size('large', 600, 600, true);
-        add_image_size('xlarge', 900, 900, true);
-        add_image_size('xxlarge', 1200, 1200, true);
-        add_image_size('full', 1800, 1800, true);
+        add_image_size('thumb_small', 150, 150, true);
+        add_image_size('thumb_medium', 500, 360, true);
+        add_image_size('thumb_large', 700, 400, true);
+        add_image_size('thumb_xlarge', 900, 600, true);
+        add_image_size('thumb_xxlarge', 1200, 900, true);
     }
 }
 add_action('after_setup_theme', 'aran_setup');

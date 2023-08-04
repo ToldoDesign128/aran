@@ -3,9 +3,18 @@
 <main>
     <!-- Hero -->
     <section class="w-full h-screen text-center flex flex-col items-center justify-center">
-        <h1 class="text-5xl font-serif uppercase my-5"><?php echo esc_html(get_field('titolo_hero_home')); ?></h1>
-        <p><?php echo esc_html(get_field('testo_hero_home')); ?></p>
-        <span class="absolute w-0.5 h-52 bg-stone-400" style="top: 80%;"></span>
+
+        <!-- background hero -->
+        <span class="w-full bg-neutral-400 h-screen absolute z-0"></span>
+        <?php
+        $image_hero_home = get_field('sfondo_hero_home');
+        if (!empty($image_hero_home)) : ?>
+            <img src="<?php echo esc_url($image_hero_home['url']); ?>" alt="<?php echo esc_attr($image_hero_home['alt']); ?>" class="w-full mix-blend-multiply h-screen object-cover absolute z-0"/>
+        <?php endif; ?>
+
+        <h1 class="text-5xl font-serif text-white uppercase my-5 z-10"><?php echo esc_html(get_field('titolo_hero_home')); ?></h1>
+        <p class="text-white z-10"><?php echo esc_html(get_field('testo_hero_home')); ?></p>
+        <span class="absolute w-0.5 h-52 bg-stone-400 z-10" style="top: 80%;"></span>
     </section>
 
     <!-- Sezione 1 -->
