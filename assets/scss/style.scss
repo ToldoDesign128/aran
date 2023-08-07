@@ -21,4 +21,7 @@ Text Domain: aran
 @import "tailwindcss/utilities";
 
 //Helpers
+@import "helpers/spacer";
+
 @import "helpers/footer";
+@import "helpers/home";

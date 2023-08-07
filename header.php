@@ -29,7 +29,7 @@
                         $link_title = $link['title'];
                         $link_target = $link['target'] ? $link['target'] : '_self';
                     ?>
-                        <a class="text-white text-sm" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
+                        <a class="text-white text-sm" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><img src="<?php echo get_template_directory_uri() . '/assets/img/telefono-header.svg'; ?>" class="inline mr-2 max-h-4 mt-negative"><?php echo esc_html($link_title); ?></a>
 
                     <!-- Indirizzo  -->
                     <?php endif;
@@ -39,7 +39,7 @@
                         $link2_title = $link2['title'];
                         $link2_target = $link2['target'] ? $link2['target'] : '_self';
                     ?>
-                        <a class="text-white text-sm" href="<?php echo esc_url($link2_url); ?>" target="<?php echo esc_attr($link2_target); ?>"><?php echo esc_html($link2_title); ?></a>
+                        <a class="text-white text-sm" href="<?php echo esc_url($link2_url); ?>" target="<?php echo esc_attr($link2_target); ?>"><img src="<?php echo get_template_directory_uri() . '/assets/img/indirizzo-header.svg'; ?>" class="inline mr-2 max-h-4 mt-negative"><?php echo esc_html($link2_title); ?></a>
                     <?php endif; ?>
                 </div>
                 <div class="w-4/12 flex justify-between">
@@ -52,7 +52,7 @@
                         $link3_title = $link3['title'];
                         $link3_target = $link3['target'] ? $link3['target'] : '_self';
                     ?>
-                        <a class="text-white text-sm" href="<?php echo esc_url($link3_url); ?>" target="<?php echo esc_attr($link3_target); ?>"><?php echo esc_html($link3_title); ?></a>
+                        <a class="text-white text-sm" href="<?php echo esc_url($link3_url); ?>" target="<?php echo esc_attr($link3_target); ?>"><img src="<?php echo get_template_directory_uri() . '/assets/img/catalogo-header.svg'; ?>" class="inline mr-2 max-h-4 mt-negative"><?php echo esc_html($link3_title); ?></a>
 
                     <!-- Appuntamento  -->
                     <?php endif;
@@ -62,7 +62,7 @@
                         $link4_title = $link4['title'];
                         $link4_target = $link4['target'] ? $link4['target'] : '_self';
                     ?>
-                        <a class="text-white text-sm" href="<?php echo esc_url($link4_url); ?>" target="<?php echo esc_attr($link4_target); ?>"><?php echo esc_html($link4_title); ?></a>
+                        <a class="text-white text-sm" href="<?php echo esc_url($link4_url); ?>" target="<?php echo esc_attr($link4_target); ?>"><img src="<?php echo get_template_directory_uri() . '/assets/img/appuntamento-header.svg'; ?>" class="inline mr-2 max-h-4 mt-negative"><?php echo esc_html($link4_title); ?></a>
                     <?php endif; ?>
                 </div>
             </div>

@@ -7,6 +7,9 @@ module.exports = {
     'front-page.php',
     'index.php',
     'page.php',
+    'page-complementi.php',
+    'page-living.php',
+    'page-offerte.php',
     'single.php',
   ],
   theme: {

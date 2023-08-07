@@ -9,7 +9,7 @@
         <?php
         $image_hero_home = get_field('sfondo_hero_home');
         if (!empty($image_hero_home)) : ?>
-            <img src="<?php echo esc_url($image_hero_home['url']); ?>" alt="<?php echo esc_attr($image_hero_home['alt']); ?>" class="w-full mix-blend-multiply h-screen object-cover absolute z-0"/>
+            <img src="<?php echo esc_url($image_hero_home['url']); ?>" alt="<?php echo esc_attr($image_hero_home['alt']); ?>" class="w-full mix-blend-multiply h-screen object-cover absolute z-0" />
         <?php endif; ?>
 
         <h1 class="text-5xl font-serif text-white uppercase my-5 z-10"><?php echo esc_html(get_field('titolo_hero_home')); ?></h1>
@@ -18,9 +18,22 @@
     </section>
 
     <!-- Sezione 1 -->
-    <section class="w-full py-24 h-screen text-center flex flex-col items-center">
+    <section id="image-section-home" class="w-full py-24 text-center flex flex-col items-center relative">
         <p class="absolute text-9xl font-serif uppercase text-stone-100 tracking-widest z-0">Made in Italy</p>
         <h2 class="w-4/12 text-3xl font-serif uppercase mt-24 z-10"><?php the_field('titolo_sezione_home'); ?></h2>
+
+        <!-- immagini -->
+        <?php
+        $images_section_home = get_field('immagini_sezione_home');
+        if ($images_section_home) : ?>
+            <ul>
+                <?php foreach ($images_section_home as $image_section_home) : ?>
+                    <li>
+                        <img src="<?php echo esc_url($image_section_home['sizes']['thumb_xlarge']); ?>" alt="<?php echo esc_attr($image_section_home['alt']); ?>" class="absolute" />
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        <?php endif; ?>
     </section>
 
     <!-- Sezione 2 -->
@@ -45,33 +58,33 @@
 
         <div class="contatti-footer mt-10 bg-stone-200">
             <div class="max-w-screen-xl flex">
-                <div class="w-4/12 flex px-8 py-24">
+                <div class="w-4/12 flex px-16 py-24">
                     <?php
                     $card1 = get_field('card_1_home');
                     if ($card1) : ?>
-                        <span class="w-4/12"></span> <!-- da sostituire con l'icona -->
+                        <img src="<?php echo get_template_directory_uri() . '/assets/img/icone-home.svg'; ?>" class="self-baseline w-3/12 pr-12"></img>
                         <div class="flex flex-col">
                             <p class="w-12/12 text-xl font-serif"><?php echo esc_html($card1['titolo_card_1_home']); ?></p>
                             <p class="w-12/12 mt-5 font-serif"><?php echo esc_html($card1['testo_card_1_home']); ?></p>
                         </div>
                     <?php endif; ?>
                 </div>
-                <div class="w-4/12 flex px-8 py-24 bg-stone-300">
+                <div class="w-4/12 flex px-16 py-24 bg-stone-300">
                     <?php
                     $card2 = get_field('card_2_home');
                     if ($card2) : ?>
-                        <span class="w-4/12"></span> <!-- da sostituire con l'icona -->
+                        <img src="<?php echo get_template_directory_uri() . '/assets/img/icone-home.svg'; ?>" class="self-baseline w-3/12 pr-12"></img>
                         <div class="flex flex-col">
                             <p class="w-12/12 text-xl font-serif"><?php echo esc_html($card2['titolo_card_2_home']); ?></p>
                             <p class="w-12/12 mt-5 font-serif"><?php echo esc_html($card2['testo_card_2_home']); ?></p>
                         </div>
                     <?php endif; ?>
                 </div>
-                <div class="w-4/12 flex px-8 py-24">
+                <div class="w-4/12 flex px-16 py-24">
                     <?php
                     $card3 = get_field('card_3_home');
                     if ($card3) : ?>
-                        <span class="w-4/12"></span> <!-- da sostituire con l'icona -->
+                        <img src="<?php echo get_template_directory_uri() . '/assets/img/icone-home.svg'; ?>" class="self-baseline w-3/12 pr-12"></img><?php get_template_directory_uri() . "/assets/img/icone-home.svg"; ?>
                         <div class="flex flex-col">
                             <p class="w-12/12 text-xl font-serif"><?php echo esc_html($card3['titolo_card_3_home']); ?></p>
                             <p class="w-12/12 mt-5 font-serif"><?php echo esc_html($card3['testo_card_3_home']); ?></p>

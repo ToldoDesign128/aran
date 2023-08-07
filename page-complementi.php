@@ -8,7 +8,7 @@
 
     <!-- Loop News -->
     <section class="max-w-screen-xl m-auto py-8">
-        <div class="flex flex-row gap-8">
+        <div class="grid grid-cols-3 gap-8">
             <?php
             $loop = new WP_Query(array(
                 'post_type'         => 'arredamento',
@@ -20,14 +20,16 @@
 
             while ($loop->have_posts()) : $loop->the_post(); ?>
 
-                <article class="basis-1/3 flex flex-col">
-                    <div>
-                        <?php the_post_thumbnail('thumb_medium', ['class' => 'object-cover']); ?>
-                    </div>
-                    <div class="mt-3 text-lg">
-                        <h3><?php echo get_the_title(); ?></h3>
-                    </div>
-                </article>
+                <a href="<?php echo the_permalink();?>">
+                    <article>
+                        <div>
+                            <?php the_post_thumbnail('thumb_medium', ['class' => 'object-cover']); ?>
+                        </div>
+                        <div class="mt-3 text-lg">
+                            <h3><?php echo get_the_title(); ?></h3>
+                        </div>
+                    </article>
+                </a>
 
             <?php endwhile; ?>
         </div>
