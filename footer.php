@@ -8,10 +8,10 @@
         <div class="w-6/12 flex flex-wrap py-14">
 
             <!-- Testo -->
-            <h5 class="contatti-footer w-full text-white text-5xl font-serif uppercase my-8 pr-8"><?php echo esc_html(get_field('testo_footer', 'option')); ?></h5>
+            <p class="contatti-footer w-full text-white text-5xl font-serif uppercase my-8 pr-16"><?php echo esc_html(get_field('testo_footer', 'option')); ?></p>
 
             <!-- icone -->
-            <div class="contatti-footer w-auto flex flex-col mr-6">
+            <div class="contatti-footer w-auto flex flex-col gap-2 mr-6">
                 <img src="<?php echo get_template_directory_uri() . '/assets/img/tel-footer.svg'; ?>" class="max-h-8 my-5">
                 <img src="<?php echo get_template_directory_uri() . '/assets/img/mail-footer.svg'; ?>" class="max-h-8 my-5">
                 <img src="<?php echo get_template_directory_uri() . '/assets/img/indirizzo-footer.svg'; ?>" class="max-h-8 my-5">

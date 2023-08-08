@@ -10,7 +10,7 @@
         <?php endif; ?>
 
         <h1 class="text-5xl font-serif uppercase mt-24 text-center"><?php echo esc_html(get_field('titolo_offerte')); ?></h1>
-        <p class="text-xl font-serif mt-8 mb-24 text-center"><?php echo esc_html(get_field('testo_offerta')); ?></p>
+        <p class="text-3xl w-3/5 font-serif mt-8 mb-24 text-center"><?php echo esc_html(get_field('testo_offerta')); ?></p>
         <!-- Cta -->
         <?php
                 $pulsante = get_field('pulsante_footer', 'option');

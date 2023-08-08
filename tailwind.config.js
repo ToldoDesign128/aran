@@ -10,10 +10,13 @@ module.exports = {
     'page-complementi.php',
     'page-living.php',
     'page-offerte.php',
+    'page-azienda.php',
     'single.php',
   ],
   theme: {
-    extend: {},
+      fontFamily: {
+        'serif': ['Bodoni Moda'],
+    }
   },
   plugins: [],
 }
