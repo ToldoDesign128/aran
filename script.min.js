@@ -1,15 +1,16 @@
 //main.js
-// core version + navigation, pagination modules:
-import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
-// import Swiper and modules styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 
-// init Swiper:
-const swiper = new Swiper('.swiper', {
-  // configure Swiper to use modules
-  modules: [Navigation, Pagination],
-  ...
+//Splide
+
+var splide = new Splide(".splide", {
+  type: "loop",
+  perPage: 3,
+  breakpoints: {
+    1200: { perPage: 2 },
+    640: { perPage: 1 },
+  },
+  focus: 0,
+  omitEnd: true,
 });
+
+splide.mount();

@@ -16,8 +16,17 @@ module.exports = {
   theme: {
       fontFamily: {
         'serif': ['Bodoni Moda'],
-    }
-  },
+    },
+    extend: {
+      colors: {
+        'dark-aran': '#1D1D1B',
+        'grey-aran': '#949494',
+        'light-grey-aran': '#949494',
+        'dark-aran': '#1D1D1B',
+        'brown-aran': '#A19991',
+      },
+  }
+},
   plugins: [],
 }
 

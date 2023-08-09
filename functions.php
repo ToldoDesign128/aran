@@ -31,8 +31,10 @@ function add_aran_scripts()
 {
     wp_enqueue_style('aran-style', get_template_directory_uri() . '/style.min.css');
     wp_enqueue_style('aran-style', get_template_directory_uri() . '/style.css');
+    wp_enqueue_style('splide-style', get_template_directory_uri() . '/splide.min.css');
 
-    wp_enqueue_script("iconify-script", 'https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js', array("jquery"), null, true);
+
+    wp_enqueue_script("splide-script", get_template_directory_uri() . '/assets/js/splide.min.js', array("jquery"), null, true);
     wp_enqueue_script("aran-script", get_template_directory_uri() . '/script.min.js', array("jquery"), null, true);
 }
 add_action('wp_enqueue_scripts', 'add_aran_scripts');
