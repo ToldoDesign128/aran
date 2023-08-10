@@ -40,11 +40,11 @@
         </div>
     </section>
     <section class="py-20">
-        <div class="splide">
+        <div class="splide relative">
             <div class="splide__track">
                 <?php
                 $images_single = get_field('slider_single');
-                $size_single = 'thumb_large';
+                $size_single = 'thumb_xlarge';
                 if ($images_single) : ?>
                     <ul class="splide__list">
                         <?php foreach ($images_single as $image_id_single) : ?>
@@ -54,6 +54,22 @@
                         <?php endforeach; ?>
                     </ul>
                 <?php endif; ?>
+            </div>
+            <!-- Custom Arrow -->
+            <div class="splide__arrows">
+                <button class="splide__arrow splide__arrow--prev">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/img/arrowsx.svg'; ?>" class="h-12"></img>
+                </button>
+                <button class="splide__arrow splide__arrow--next">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/img/arrowdx.svg'; ?>" class="h-12"></img>
+                </button>
+            </div>
+            <span class="absolute w-px bg-brown-aran top-0" style="height: 400px; left: 17%;"></span>
+            <span class="absolute w-px bg-brown-aran top-0" style="height: 400px; right: 17%;"></span>
+
+            <!-- Progressive bar -->
+            <div class="my-slider-progress">
+                <div class="my-slider-progress-bar"></div>
             </div>
         </div>
 

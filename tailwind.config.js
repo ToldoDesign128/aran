@@ -11,6 +11,8 @@ module.exports = {
     'page-living.php',
     'page-offerte.php',
     'page-azienda.php',
+    'page-catalogo.php',
+    'page-consulenza.php',
     'single.php',
   ],
   theme: {

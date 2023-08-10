@@ -29,9 +29,9 @@ add_filter('use_block_editor_for_post', '__return_false');
 // Il mio stile e i miei scripts
 function add_aran_scripts()
 {
+    wp_enqueue_style('splide-style', get_template_directory_uri() . '/splide.min.css');
     wp_enqueue_style('aran-style', get_template_directory_uri() . '/style.min.css');
     wp_enqueue_style('aran-style', get_template_directory_uri() . '/style.css');
-    wp_enqueue_style('splide-style', get_template_directory_uri() . '/splide.min.css');
 
 
     wp_enqueue_script("splide-script", get_template_directory_uri() . '/assets/js/splide.min.js', array("jquery"), null, true);

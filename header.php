@@ -8,10 +8,31 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="theme-color" content="#417BC7">
     <meta name="description" content="<?php bloginfo('description'); ?>">
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5B7BWHSB');
+    </script>
+    <!-- End Google Tag Manager -->
     <?php wp_head(); ?>
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5B7BWHSB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <!-- Main Navigation  -->
     <section class="fixed top-0 left-0 w-full z-40">
@@ -31,7 +52,7 @@
                     ?>
                         <a class="text-white text-sm" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><img src="<?php echo get_template_directory_uri() . '/assets/img/telefono-header.svg'; ?>" class="inline mr-2 max-h-4 mt-negative"><?php echo esc_html($link_title); ?></a>
 
-                    <!-- Indirizzo  -->
+                        <!-- Indirizzo  -->
                     <?php endif;
                     $link2 = get_field('link_2', 'option');
                     if ($link2) :
@@ -54,7 +75,7 @@
                     ?>
                         <a class="text-white text-sm" href="<?php echo esc_url($link3_url); ?>" target="<?php echo esc_attr($link3_target); ?>"><img src="<?php echo get_template_directory_uri() . '/assets/img/catalogo-header.svg'; ?>" class="inline mr-2 max-h-4 mt-negative"><?php echo esc_html($link3_title); ?></a>
 
-                    <!-- Appuntamento  -->
+                        <!-- Appuntamento  -->
                     <?php endif;
                     $link4 = get_field('link_4', 'option');
                     if ($link4) :
