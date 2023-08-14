@@ -58,7 +58,7 @@
                     $pulsante_title = $pulsante['title'];
                     $pulsante_target = $pulsante['target'] ? $pulsante['target'] : '_self';
         ?>
-            <a class="contatti-footer w-max text-white text-sm uppercase tracking-wider my-8 py-4 px-8 border border-white" href="<?php echo esc_url($pulsante_url); ?>" target="<?php echo esc_attr($pulsante_target); ?>"><?php echo esc_html($pulsante_title); ?></a>
+            <a class="contatti-footer w-max text-white text-sm uppercase tracking-wider my-8 py-4 px-8 border border-white md:hover:border-dark-aran md:hover:bg-white md:hover:text-dark-aran transition-all" href="<?php echo esc_url($pulsante_url); ?>" target="<?php echo esc_attr($pulsante_target); ?>"><?php echo esc_html($pulsante_title); ?></a>
         <?php endif; ?>
 
         </div>
@@ -73,13 +73,13 @@
     <section class="border-b border-neutral-900">
         <div class="max-w-screen-xl mx-auto py-12 flex justify-between">
             <a href="<?php echo get_home_url(); ?>" class="w-3/12">
-                LOGO
+                <img src="<?php echo get_template_directory_uri() . '/assets/img/logo.svg'; ?>" class="h-12"></img>
             </a>
-            <nav class="w-full">
+            <nav class="w-8/12 flex">
                 <?php wp_nav_menu(array(
                     'theme_location'    => 'header',
                     'container'         =>  false,
-                    'menu_class'        => 'flex justify-between uppercase text-lg tracking-wider',
+                    'menu_class'        => 'flex justify-between uppercase text-lg tracking-wider items-center w-full',
                     'orderby'           => 'menu_order'
                 )); ?>
             </nav>

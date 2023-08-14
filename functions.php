@@ -16,7 +16,7 @@ function aran_setup()
     if (function_exists('add_image_size')) {
         add_image_size('thumb_small', 150, 150, true);
         add_image_size('thumb_medium', 500, 360, true);
-        add_image_size('thumb_large', 700, 400, true);
+        add_image_size('thumb_large', 768, 567, true);
         add_image_size('thumb_xlarge', 900, 600, true);
         add_image_size('thumb_xxlarge', 1200, 900, true);
     }

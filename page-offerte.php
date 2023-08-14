@@ -19,7 +19,7 @@
                     $pulsante_title = $pulsante['title'];
                     $pulsante_target = $pulsante['target'] ? $pulsante['target'] : '_self';
         ?>
-            <a class="w-max text-sm uppercase tracking-wider py-4 px-8 border text-center" href="<?php echo esc_url($pulsante_url); ?>" target="<?php echo esc_attr($pulsante_target); ?>"><?php echo esc_html($pulsante_title); ?></a>
+            <a class="w-max text-sm uppercase tracking-wider py-4 px-8 border text-center md:hover:border-white md:hover:bg-dark-aran md:hover:text-white transition-all" href="<?php echo esc_url($pulsante_url); ?>" target="<?php echo esc_attr($pulsante_target); ?>"><?php echo esc_html($pulsante_title); ?></a>
         <?php endif; ?>
     </section>  
 </main>

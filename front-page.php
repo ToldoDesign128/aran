@@ -53,7 +53,7 @@
                     $pulsante_home_title = $pulsante_home['title'];
                     $pulsante_home_target = $pulsante_home['target'] ? $pulsante_home['target'] : '_self';
                 ?>
-                    <a class="w-max text-white text-sm uppercase tracking-wider my-10 py-4 px-8 border border-white" href="<?php echo esc_url($pulsante_home_url); ?>" target="<?php echo esc_attr($pulsante_home_target); ?>"><?php echo esc_html($pulsante_home_title); ?></a>
+                    <a class="w-max text-white text-sm uppercase tracking-wider my-10 py-4 px-8 border border-white md:hover:border-dark-aran md:hover:bg-white md:hover:text-dark-aran transition-all" href="<?php echo esc_url($pulsante_home_url); ?>" target="<?php echo esc_attr($pulsante_home_target); ?>"><?php echo esc_html($pulsante_home_title); ?></a>
                 <?php endif; ?>
             </div>
         </div>

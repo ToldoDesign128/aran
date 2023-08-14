@@ -23,7 +23,7 @@
                 <a href="<?php echo the_permalink();?>">
                     <article>
                         <div>
-                            <?php the_post_thumbnail('thumb_medium', ['class' => 'object-cover']); ?>
+                        <?php the_post_thumbnail('medium_large', ['class' => 'object-cover max-h-60']); ?>
                         </div>
                         <div class="mt-3 text-lg">
                             <h3><?php echo get_the_title(); ?></h3>
