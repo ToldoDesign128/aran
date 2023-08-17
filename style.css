@@ -494,6 +494,10 @@ video {
 .m-auto{
   margin: auto;
 }
+.mx-1{
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
 .mx-4{
   margin-left: 1rem;
   margin-right: 1rem;
@@ -572,6 +576,9 @@ video {
 .grid{
   display: grid;
 }
+.hidden{
+  display: none;
+}
 .aspect-video{
   aspect-ratio: 16 / 9;
 }
@@ -599,11 +606,11 @@ video {
 .max-h-4{
   max-height: 1rem;
 }
-.max-h-8{
-  max-height: 2rem;
-}
 .max-h-60{
   max-height: 15rem;
+}
+.max-h-8{
+  max-height: 2rem;
 }
 .w-0{
   width: 0px;
@@ -662,6 +669,9 @@ video {
 }
 .max-w-screen-xl{
   max-width: 1280px;
+}
+.max-w-sm{
+  max-width: 24rem;
 }
 .grid-cols-3{
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -744,6 +754,10 @@ video {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.px-1{
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
 .px-12{
   padding-left: 3rem;
   padding-right: 3rem;
@@ -755,6 +769,10 @@ video {
 .px-2{
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+.px-5{
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 .px-6{
   padding-left: 1.5rem;
@@ -804,6 +822,9 @@ video {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
+.pb-4{
+  padding-bottom: 1rem;
+}
 .pr-12{
   padding-right: 3rem;
 }
@@ -815,6 +836,9 @@ video {
 }
 .pt-32{
   padding-top: 8rem;
+}
+.text-left{
+  text-align: left;
 }
 .text-center{
   text-align: center;
@@ -900,7 +924,7 @@ footer nav .menu-item {
 }
 @media (min-width: 768px) {
   footer nav .menu-item :hover, footer nav .menu-item :focus, footer nav .menu-item :active {
-    opacity: 0.8;
+    opacity: 0.7;
   }
 }
 footer .current-menu-item {
@@ -966,11 +990,12 @@ footer .current-menu-item ::after {
   height: auto;
 }
 .splide .my-slider-progress {
-  margin: 5rem 0;
+  margin: 4rem auto;
+  max-width: 35%;
   background: #ccc;
 }
 .splide .my-slider-progress-bar {
-  background: greenyellow;
+  background: black;
   height: 2px;
   transition: width 400ms ease;
   width: 0;
@@ -982,7 +1007,7 @@ header nav .menu-item {
 }
 @media (min-width: 768px) {
   header nav .menu-item :hover, header nav .menu-item :focus, header nav .menu-item :active {
-    opacity: 0.8;
+    opacity: 0.7;
   }
 }
 header .current-menu-item {
@@ -997,7 +1022,33 @@ header .current-menu-item ::after {
   width: 3rem;
   background-color: black;
 }
+
+#menu-mobile nav .menu-item {
+  padding: 0.5rem 0;
+}
+
+.open {
+  display: flex;
+}
+
+@media (min-width: 640px){
+  .sm\:max-w-screen-sm{
+    max-width: 640px;
+  }
+}
+
 @media (min-width: 768px){
+  .md\:mx-auto{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .md\:max-w-screen-md{
+    max-width: 768px;
+  }
+  .md\:px-5{
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
   .md\:hover\:border-dark-aran:hover{
     --tw-border-opacity: 1;
     border-color: rgb(29 29 27 / var(--tw-border-opacity));
@@ -1021,5 +1072,41 @@ header .current-menu-item ::after {
   .md\:hover\:text-white:hover{
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+}
+
+@media (min-width: 1024px){
+  .lg\:block{
+    display: block;
+  }
+  .lg\:flex{
+    display: flex;
+  }
+  .lg\:hidden{
+    display: none;
+  }
+  .lg\:w-5\/12{
+    width: 41.666667%;
+  }
+  .lg\:w-8\/12{
+    width: 66.666667%;
+  }
+  .lg\:max-w-screen-lg{
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px){
+  .xl\:w-4\/12{
+    width: 33.333333%;
+  }
+  .xl\:max-w-screen-xl{
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px){
+  .\32xl\:max-w-screen-2xl{
+    max-width: 1536px;
   }
 }

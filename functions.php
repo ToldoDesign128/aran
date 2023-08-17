@@ -12,6 +12,15 @@ function aran_setup()
         'header' => esc_html__('Header', 'slug-theme')
     ));
 
+    add_action('admin_head', 'remove_content_editor');
+    /**
+     * Remove the content editor from ALL pages 
+     */
+    function remove_content_editor()
+    {
+        remove_post_type_support('page', 'editor');
+    }
+
     // image size
     if (function_exists('add_image_size')) {
         add_image_size('thumb_small', 150, 150, true);
@@ -29,6 +38,7 @@ add_filter('use_block_editor_for_post', '__return_false');
 // Il mio stile e i miei scripts
 function add_aran_scripts()
 {
+    wp_enqueue_style('hamburger-style', get_template_directory_uri() . '/hamburgers.min.css');
     wp_enqueue_style('splide-style', get_template_directory_uri() . '/splide.min.css');
     wp_enqueue_style('aran-style', get_template_directory_uri() . '/style.min.css');
     wp_enqueue_style('aran-style', get_template_directory_uri() . '/style.css');

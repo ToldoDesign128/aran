@@ -99,16 +99,56 @@
     </section>
 
     <!-- Sezione 3 -->
-    <section class="w-full py-24 h-screen text-center flex flex-col items-center relative">
-        <p class="absolute text-9xl font-serif uppercase text-stone-100 tracking-widest z-0">Collezione</p>
-        <h4 class="w-4/12 text-3xl font-serif uppercase mt-24 z-10"><?php the_field('titolo_sezione_3_home'); ?></h4>
-        <!-- Gallery -->
-        <div>
-
+    <section class="w-full pt-24 pb-4 relative">
+        <div class="text-center flex flex-col items-center">
+            <p class="absolute text-9xl font-serif uppercase text-stone-100 tracking-widest z-0">Collezione</p>
+            <h4 class="w-4/12 text-3xl font-serif uppercase mt-24 z-10"><?php the_field('titolo_sezione_3_home'); ?></h4>
         </div>
-        <!-- Sfondo -->
-        <img src="<?php echo get_template_directory_uri() . '/assets/img/sfondo2.svg'; ?>" alt="" class="absolute bottom-0 object-cover" style="left: -15%;">
+        <!-- Gallery -->
+        <section class="py-20 z-10">
+        <div class="splide relative">
+            <div class="splide__track">
+            <?php
+                $rows_slide = get_field('slide_sezione_3_home');
+                if ($rows_slide) {
+                    echo '<ul class="splide__list">';
+                    foreach ($rows_slide as $row_slide) {
+                        $image_slide = $row_slide['immagine_slide_sezione_3_home'];
+                        $title_slide = $row_slide['titolo_prodotto_slide_sezione_3_home'];
+                        echo '<li class="splide__slide">';
+                        echo wp_get_attachment_image($image_slide, 'thumb_xlarge');
+                        echo '<p class="py-8 text-left text-3xl font-serif">';
+                        echo $title_slide;
+                        echo '</p>';
+                        echo '</li>';
+                    }
+                    echo '</ul>';
+                }; ?>
+            </div>
+            <!-- Custom Arrow -->
+            <div class="splide__arrows">
+                <button class="splide__arrow splide__arrow--prev">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/img/arrowsx.svg'; ?>" class="h-12"></img>
+                </button>
+                <button class="splide__arrow splide__arrow--next">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/img/arrowdx.svg'; ?>" class="h-12"></img>
+                </button>
+            </div>
+            <span class="absolute w-px bg-brown-aran top-0" style="height: 400px; left: 17%;"></span>
+            <span class="absolute w-px bg-brown-aran top-0" style="height: 400px; right: 17%;"></span>
+
+            <!-- Progressive bar -->
+            <div class="my-slider-progress">
+                <div class="my-slider-progress-bar"></div>
+            </div>
+        </div>
+
     </section>
+
+        <!-- Sfondo -->
+        <img src="<?php echo get_template_directory_uri() . '/assets/img/sfondo2.svg'; ?>" alt="" class="absolute bottom-0 object-cover z-0" style="left: -15%; z-index: -10;">
+    </section>
+    
 </main>
 
 <?php get_footer(); ?>
