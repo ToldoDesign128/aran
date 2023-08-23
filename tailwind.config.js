@@ -23,7 +23,7 @@ module.exports = {
       colors: {
         'dark-aran': '#1D1D1B',
         'grey-aran': '#949494',
-        'light-grey-aran': '#949494',
+        'light-grey-aran': '#EDEDED',
         'brown-aran': '#A19991',
       },
   }

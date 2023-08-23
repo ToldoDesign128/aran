@@ -1,5 +1,13 @@
 .contatti-footer{
-    margin-left: calc(calc(99vw - 1280px) / 2);
+    @media (min-width: 1024px) {
+        margin-left: calc(calc(99vw - 1024px) / 2);
+    }
+    @media (min-width: 1280px) {
+        margin-left: calc(calc(99vw - 1280px) / 2);
+    }
+    @media (min-width: 1536px) {
+        margin-left: calc(calc(99vw - 1536px) / 2);
+    }
 }
 footer{
     nav{
@@ -7,10 +15,15 @@ footer{
             opacity: 1;
             transition: all 1s cubic-bezier(.215, .61, .355, 1);
 
-            @media  (min-width: 768px){
+            @media  (min-width: 1024px){
                 :hover,:focus,:active{
                     opacity: 0.7;
                 }
+            }
+
+            // Mobile
+            @media  (max-width: 1024px){
+                padding: .5rem 0;
             }
                 
             }

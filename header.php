@@ -39,7 +39,7 @@
 
         <!-- Top Bar  -->
         <div class="lg:block hidden bg-neutral-900 w-full">
-            <div class="2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg mx-auto py-2 px-5 flex justify-between">
+            <div class="2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg mx-auto py-2 px-8 flex justify-between">
                 <div class="xl:w-4/12 lg:w-5/12 flex justify-between">
 
                     <!-- Telefono  -->
@@ -90,7 +90,7 @@
         </div>
 
         <header class="w-full bg-white">
-            <div class="2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm max-w-sm md:mx-auto mx-1 py-5 md:px-5 px-1 flex justify-between">
+            <div class="2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md md:mx-auto py-5 md:px-8 px-4 flex justify-between">
 
                 <a href="<?php echo get_home_url(); ?>" class="flex items-center">
                     <img src="<?php echo get_template_directory_uri() . '/assets/img/logo.svg'; ?>" class="h-12"></img>
@@ -117,8 +117,8 @@
         </header>
 
         <!-- Header mobile -->
-        <header id="menu-mobile" class="hidden bg-neutral-900 flex-col py-12">
-            <nav class="w-full md:max-w-screen-md sm:max-w-screen-sm max-w-sm md:mx-auto mx-1 md:px-5 px-1 flex justify-between items-center">
+        <header id="menu-mobile" class="hidden bg-neutral-900 flex-col py-20">
+            <nav class="w-full md:max-w-screen-md sm:max-w-screen-sm max-w-sm md:mx-auto mx-1 md:px-8 px-1 flex justify-between items-center">
                 <?php wp_nav_menu(array(
                     'theme_location'    => 'header',
                     'container'         =>  false,
@@ -126,7 +126,7 @@
                     'orderby'           => 'menu_order'
                 )); ?>
             </nav>
-            <div class="w-full md:max-w-screen-md sm:max-w-screen-sm max-w-sm md:mx-auto md:px-5 px-1 w-full flex flex-col items-center">
+            <div class="w-full md:max-w-screen-md sm:max-w-screen-sm max-w-sm md:mx-auto md:px-8 px-1 pt-12 w-full flex flex-col items-center">
 
                 <!-- Catalogo  -->
                 <?php
