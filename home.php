@@ -4,7 +4,7 @@
     <section class="relative">
         <span class="absolute h-0.5 w-72 bg-stone-400 top-3/4"></span>
         <div class="2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md md:m-auto md:px-8 px-4 lg:py-24 py-12 flex">
-            <h2 class="text-5xl font-serif uppercase"><?php wp_title('', true, 'right'); ?></h2>
+            <h2 class="xl:text-5xl lg:text-4xl text-3xl font-serif uppercase"><?php wp_title('', true, 'right'); ?></h2>
         </div>
     </section>
 
@@ -39,15 +39,15 @@
 
     <!-- FAQ -->
     <section class="2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md md:m-auto md:px-8 px-4 py-20">
-        <h3 class="xl:text-4xl lg:text-3xl text-2xl font-serif lg:my-8 my-4"><?php echo esc_html(get_field('titolo_faq_cucine')); ?></h3>
+        <h3 class="xl:text-4xl lg:text-3xl text-2xl font-serif lg:my-8 my-4"> Domande frequenti</h3>
         <div class="flex flex-col">
             <?php
-            if (have_rows('repeater_faq_cucine')) :
+            if (have_rows('cucine_faq')) :
 
-                while (have_rows('repeater_faq_cucine')) : the_row();
+                while (have_rows('cucine_faq')) : the_row();
 
-                    $faq_domanda_cucina = get_sub_field('domanda_faq_cucine');
-                    $faq_risposta_cucina = get_sub_field('risposta_faq_cucine'); ?>
+                    $faq_domanda_cucina = get_sub_field('domanda_cucine_faq');
+                    $faq_risposta_cucina = get_sub_field('risposta_cucine_faq'); ?>
 
                     <div class="accordion bg-light-grey-aran my-2 px-6 py-4">
                         <div class="flex flex-row justify-between items-center">
@@ -65,7 +65,6 @@
             <?php endwhile;
             endif;
             ?>
-        </div>
         </div>
     </section>
 

@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap);
 /*
 Theme Name: Aran
 Theme URI:
@@ -592,6 +592,9 @@ video {
 .hidden{
   display: none;
 }
+.aspect-3\/1{
+  aspect-ratio: 3 / 1;
+}
 .aspect-video{
   aspect-ratio: 16 / 9;
 }
@@ -648,9 +651,6 @@ video {
 }
 .w-3\/12{
   width: 25%;
-}
-.w-3\/5{
-  width: 60%;
 }
 .w-4\/12{
   width: 33.333333%;
@@ -1198,6 +1198,9 @@ header .current-menu-item ::after {
   .lg\:h-auto{
     height: auto;
   }
+  .lg\:w-3\/5{
+    width: 60%;
+  }
   .lg\:w-4\/12{
     width: 33.333333%;
   }
@@ -1209,6 +1212,10 @@ header .current-menu-item ::after {
   }
   .lg\:w-8\/12{
     width: 66.666667%;
+  }
+  .lg\:w-max{
+    width: -moz-max-content;
+    width: max-content;
   }
   .lg\:max-w-screen-lg{
     max-width: 1024px;
@@ -1238,6 +1245,10 @@ header .current-menu-item ::after {
   .lg\:py-px{
     padding-top: 1px;
     padding-bottom: 1px;
+  }
+  .lg\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
   .lg\:text-3xl{
     font-size: 1.875rem;

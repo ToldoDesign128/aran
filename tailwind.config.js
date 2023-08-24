@@ -13,6 +13,7 @@ module.exports = {
     'page-azienda.php',
     'page-catalogo.php',
     'page-consulenza.php',
+    'page-contatti.php',
     'single.php',
   ],
   theme: {
@@ -25,6 +26,9 @@ module.exports = {
         'grey-aran': '#949494',
         'light-grey-aran': '#EDEDED',
         'brown-aran': '#A19991',
+      },
+      aspectRatio: {
+        '3/1': '3 / 1',
       },
   }
 },
