@@ -1,0 +1,43 @@
+.contatti-footer{
+    @media (min-width: 1024px) {
+        margin-left: calc(calc(99vw - 1024px) / 2);
+    }
+    @media (min-width: 1280px) {
+        margin-left: calc(calc(99vw - 1280px) / 2);
+    }
+    @media (min-width: 1536px) {
+        margin-left: calc(calc(99vw - 1536px) / 2);
+    }
+}
+footer{
+    nav{
+        .menu-item{
+            opacity: 1;
+            transition: all 1s cubic-bezier(.215, .61, .355, 1);
+
+            @media  (min-width: 1024px){
+                :hover,:focus,:active{
+                    opacity: 0.7;
+                }
+            }
+
+            // Mobile
+            @media  (max-width: 1024px){
+                padding: .5rem 0;
+            }
+                
+            }
+        }
+        .current-menu-item{
+            position: relative;
+            ::after{
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 1px;
+                width: 3rem;
+                background-color: black;
+            }
+        }
+    }

@@ -1,4 +1,3 @@
-<!-- Back-end Custom -->
 <?php
 
 function my_login_logo()

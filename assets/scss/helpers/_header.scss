@@ -1,0 +1,39 @@
+header{
+    nav{
+        .menu-item{
+            opacity: 1;
+            transition: all 1s cubic-bezier(.215, .61, .355, 1);
+
+            @media  (min-width: 768px){
+                :hover,:focus,:active{
+                    opacity: 0.7;
+                }
+            }
+                
+            }
+        }
+        .current-menu-item{
+            position: relative;
+            ::after{
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 1px;
+                width: 3rem;
+                background-color: black;
+            }
+        }
+    }
+
+#menu-mobile{
+    nav{
+        .menu-item{
+            padding: .5rem 0;
+        }
+    }
+}
+
+.open{
+    display: flex;
+}

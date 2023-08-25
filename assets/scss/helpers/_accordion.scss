@@ -1,0 +1,37 @@
+.accordion {
+  &__icon {
+    height: 30px;
+    width: 30px;
+    position: relative;
+    &__items {
+      position: absolute;
+      top: 15px;
+      left: 0;
+      display: block;
+      height: 1px;
+      width: 30px;
+      background-color: #949494;
+
+      &:last-child {
+        top: 0;
+        left: 15px;
+        height: 30px;
+        width: 1px;
+      }
+    }
+  }
+  .pulsante-active{
+    .accordion__icon__items{
+      transform: rotate(45deg);
+    }
+  }
+  &__risposta {
+    margin-top: 1rem;
+    display: none;
+    overflow: hidden;
+    transition: max-height 1s cubic-bezier(.215, .61, .355, 1);
+  }
+}
+.open-panel{
+  display: block;
+}

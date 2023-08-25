@@ -1,0 +1,27 @@
+// single.scss
+.splide {
+  &__slide {
+    max-width: 700px;
+
+    img {
+      max-height: 400px;
+    }
+  }
+  &__arrow {
+    background: none;
+    width: auto;
+    height: auto;
+  }
+  .my-slider-progress {
+    margin: 4rem auto;
+    max-width: 35%;
+    background: #ccc;
+  }
+
+  .my-slider-progress-bar {
+    background: black;
+    height: 2px;
+    transition: width 400ms ease;
+    width: 0;
+  }
+}

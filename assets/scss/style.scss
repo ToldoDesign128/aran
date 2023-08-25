@@ -16,6 +16,19 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: aran
 */
 
+// Import font
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap');
+
+
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+//Helpers
+@import "helpers/spacer";
+@import "helpers/accordion";
+
+@import "helpers/footer";
+@import "helpers/home";
+@import "helpers/single";
+@import "helpers/header";

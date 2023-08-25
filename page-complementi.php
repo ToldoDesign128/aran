@@ -13,7 +13,7 @@
         <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
             <?php
             $loop = new WP_Query(array(
-                'post_type'         => 'post',
+                'post_type'         => 'arredamento',
                 'post_status'       => 'publish',
                 'orderby'           => 'count',
                 'order'             => 'ASC',
@@ -40,14 +40,15 @@
     <!-- FAQ -->
     <section class="2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md md:m-auto md:px-8 px-4 py-20">
         <h3 class="xl:text-4xl lg:text-3xl text-2xl font-serif lg:my-8 my-4"> Domande frequenti</h3>
+
         <div class="flex flex-col">
             <?php
-            if (have_rows('cucine_faq')) :
+            if (have_rows('repeater_faq_complementi')) :
 
-                while (have_rows('cucine_faq')) : the_row();
+                while (have_rows('repeater_faq_complementi')) : the_row();
 
-                    $faq_domanda_cucina = get_sub_field('domanda_cucine_faq');
-                    $faq_risposta_cucina = get_sub_field('risposta_cucine_faq'); ?>
+                    $faq_domanda_cucina = get_sub_field('domanda_faq_complementi');
+                    $faq_risposta_cucina = get_sub_field('risposta_faq_complementi'); ?>
 
                     <div class="accordion bg-light-grey-aran my-2 px-6 py-4">
                         <div class="flex flex-row justify-between items-center">
@@ -65,6 +66,7 @@
             <?php endwhile;
             endif;
             ?>
+        </div>
         </div>
     </section>
 

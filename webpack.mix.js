@@ -7,6 +7,8 @@ require('mix-tailwindcss');
 mix.sass('assets/scss/style.scss', 'style.css')
   .tailwind('tailwind.config.js')
   .minify('style.css');
+mix.sass('assets/scss/hamburgers.scss', 'hamburgers.css')
+  .minify('hamburgers.css');
 
 // mix.combine(['assets/js/main.js', ''], 'script.js')
 mix.minify(['assets/js/main.js'], 'script.min.js');

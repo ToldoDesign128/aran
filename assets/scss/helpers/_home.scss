@@ -1,0 +1,48 @@
+#image-section-home {
+    height: 130vh;
+    ul{
+        li {
+          img {
+            top: 20%;
+            left: 2%;
+            min-height: 25rem;
+            max-width: 20rem;
+            object-fit: cover;
+            z-index: 20;
+          }
+        }
+        :nth-child(2) {
+          img {
+            top: 40%;
+            left: 30%;
+            min-height: 25rem;
+            max-width: 39rem;
+          }
+        }
+        :nth-child(3) {
+          img {
+            top: 30%;
+            left: 75%;
+            min-height: 10rem;
+            max-width: 10rem;
+          }
+        }
+        :nth-child(4) {
+          img {
+            top: 85%;
+            left: 5%;
+            min-height: 10rem;
+            max-width: 20rem;
+          }
+        }
+        :nth-child(5) {
+            img {
+              top: 65%;
+              right: 0;
+              left: auto;
+              min-height: 25rem;
+              max-width: 15rem;
+            }
+          }
+    }
+}
