@@ -65,7 +65,7 @@
 
         <!-- Mappa -->
         <div class="lg:w-6/12 w-full lg:h-auto h-96">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2769.0720148918317!2d11.130705799999998!3d46.04966179999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4782741d5e116d57%3A0xee0e7b4b1bdc04e4!2sVia%20Enrico%20Fermi%2C%2070%2C%2038123%20Trento%20TN!5e0!3m2!1sit!2sit!4v1690903869500!5m2!1sit!2sit" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://snazzymaps.com/embed/519026" width="100%" height="100%" style="border:none;"></iframe>
         </div>
     </section>
 
@@ -126,5 +126,6 @@
     </section>
 
 </footer>
+
 <?php wp_footer(); ?>
 </body>

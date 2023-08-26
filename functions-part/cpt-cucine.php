@@ -5,7 +5,7 @@
  */
 
  add_action( 'init', 'register_cucine_post_type' );
- function register_arredamento_post_type() {
+ function register_cucine_post_type() {
  
      /** cucine **/
      $labels = array(
