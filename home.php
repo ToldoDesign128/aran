@@ -13,7 +13,7 @@
         <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
             <?php
             $loop = new WP_Query(array(
-                'post_type'         => 'post',
+                'post_type'         => 'cucine',
                 'post_status'       => 'publish',
                 'orderby'           => 'count',
                 'order'             => 'ASC',
