@@ -12,16 +12,22 @@
     width: auto;
     height: auto;
   }
-  .my-slider-progress {
-    margin: 4rem auto;
-    max-width: 35%;
-    background: #ccc;
-  }
+  .slider__line{
+    display: none;
+    height: 472px;
+    left: 17%;
 
-  .my-slider-progress-bar {
-    background: black;
-    height: 2px;
-    transition: width 400ms ease;
-    width: 0;
+    @media (min-width: 1024px) {
+      display: block;
+    }
+  }
+  .slider__line2{
+    display: none;
+    height: 472px;
+    right: 17%;
+
+    @media (min-width: 1024px) {
+      display: block;
+    }
   }
 }

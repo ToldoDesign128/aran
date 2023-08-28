@@ -66,11 +66,6 @@
             </div>
             <span class="absolute w-px bg-brown-aran top-0" style="height: 400px; left: 17%;"></span>
             <span class="absolute w-px bg-brown-aran top-0" style="height: 400px; right: 17%;"></span>
-
-            <!-- Progressive bar -->
-            <div class="my-slider-progress">
-                <div class="my-slider-progress-bar"></div>
-            </div>
         </div>
 
     </section>

@@ -1,0 +1,34 @@
+.blocco{
+    &__testo{
+        order: 2;
+    }
+    &__img{
+        order: 1;
+    }
+
+    &:nth-child(odd){
+        .blocco__testo{
+            order: 1;
+        }
+        .blocco__img{
+            order: 2;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        &__testo{
+            order: 2;
+        }
+        &__img{
+            order: 1;
+        }   
+        &:nth-child(odd){
+            .blocco__testo{
+                order: 2;
+            }
+            .blocco__img{
+                order: 1;
+            }
+        }     
+    }
+}
