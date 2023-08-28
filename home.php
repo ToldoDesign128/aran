@@ -4,7 +4,7 @@
     <section class="relative">
         <span class="archive_line_title absolute h-0.5 w-72 bg-stone-400"></span>
         <div class="2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md md:m-auto md:px-8 px-4 lg:py-24 py-12 flex lg:flex-row flex-col justify-between">
-            <h2 class="lg:w-auto w-full xl:text-5xl lg:text-4xl text-3xl font-serif uppercase"><?php echo esc_html(get_field('titolo_pagina_cucine')); ?></h2>
+            <h2 class="lg:w-7/12 w-full xl:text-5xl lg:text-4xl text-3xl font-serif uppercase"><?php echo esc_html(get_field('testo_cucine')); ?></h2>
             <p class="lg:w-auto w-full lg:pt-0 pt-12"><?php echo esc_html(get_field('testo_cucine')); ?></p>
         </div>
     </section>

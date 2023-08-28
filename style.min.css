@@ -482,9 +482,6 @@ video {
 .top-0{
   top: 0px;
 }
-.top-3\/4{
-  top: 75%;
-}
 .z-0{
   z-index: 0;
 }
@@ -605,14 +602,11 @@ video {
 .hidden{
   display: none;
 }
-.aspect-3\/1{
-  aspect-ratio: 3 / 1;
+.aspect-auto{
+  aspect-ratio: auto;
 }
 .aspect-video{
   aspect-ratio: 16 / 9;
-}
-.aspect-auto{
-  aspect-ratio: auto;
 }
 .h-0{
   height: 0px;
@@ -643,6 +637,9 @@ video {
 }
 .max-h-8{
   max-height: 2rem;
+}
+.max-h-6{
+  max-height: 1.5rem;
 }
 .w-0{
   width: 0px;
@@ -694,6 +691,12 @@ video {
 }
 .w-px{
   width: 1px;
+}
+.max-w-\[25ch\]{
+  max-width: 25ch;
+}
+.max-w-\[40ch\]{
+  max-width: 40ch;
 }
 .max-w-screen-xl{
   max-width: 1280px;
@@ -758,6 +761,10 @@ video {
 .bg-brown-aran{
   --tw-bg-opacity: 1;
   background-color: rgb(161 153 145 / var(--tw-bg-opacity));
+}
+.bg-dark-aran{
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 29 27 / var(--tw-bg-opacity));
 }
 .bg-light-grey-aran{
   --tw-bg-opacity: 1;
@@ -1223,22 +1230,24 @@ header nav .menu-item {
   opacity: 1;
   transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-@media (min-width: 768px) {
-  header nav .menu-item :hover, header nav .menu-item :focus, header nav .menu-item :active {
+@media (min-width: 1024px) {
+  header nav .menu-item :hover,
+  header nav .menu-item :focus,
+  header nav .menu-item :active {
     opacity: 0.7;
   }
-}
-header .current-menu-item {
-  position: relative;
-}
-header .current-menu-item ::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 1px;
-  width: 3rem;
-  background-color: black;
+  header .current-menu-item {
+    position: relative;
+  }
+  header .current-menu-item ::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 3rem;
+    background-color: black;
+  }
 }
 
 #menu-mobile nav .menu-item {
@@ -1361,6 +1370,9 @@ header .current-menu-item ::after {
   .lg\:w-6\/12{
     width: 50%;
   }
+  .lg\:w-7\/12{
+    width: 58.333333%;
+  }
   .lg\:w-8\/12{
     width: 66.666667%;
   }
@@ -1379,6 +1391,9 @@ header .current-menu-item ::after {
   }
   .lg\:flex-row{
     flex-direction: row;
+  }
+  .lg\:gap-0{
+    gap: 0px;
   }
   .lg\:py-0{
     padding-top: 0px;
