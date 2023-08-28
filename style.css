@@ -517,6 +517,10 @@ video {
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
+.my-16{
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
 .my-2{
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -575,9 +579,6 @@ video {
 .mt-20{
   margin-top: 5rem;
 }
-.mt-24{
-  margin-top: 6rem;
-}
 .mt-3{
   margin-top: 0.75rem;
 }
@@ -629,6 +630,9 @@ video {
 .max-h-4{
   max-height: 1rem;
 }
+.max-h-6{
+  max-height: 1.5rem;
+}
 .max-h-60{
   max-height: 15rem;
 }
@@ -637,9 +641,6 @@ video {
 }
 .max-h-8{
   max-height: 2rem;
-}
-.max-h-6{
-  max-height: 1.5rem;
 }
 .w-0{
   width: 0px;
@@ -685,6 +686,9 @@ video {
 }
 .w-auto{
   width: auto;
+}
+.w-custom-30{
+  width: 48%;
 }
 .w-full{
   width: 100%;
@@ -908,10 +912,6 @@ video {
 .text-4xl{
   font-size: 2.25rem;
   line-height: 2.5rem;
-}
-.text-5xl{
-  font-size: 3rem;
-  line-height: 1;
 }
 .text-9xl{
   font-size: 8rem;
@@ -1376,12 +1376,18 @@ header nav .menu-item {
   .lg\:w-8\/12{
     width: 66.666667%;
   }
-  .lg\:w-auto{
-    width: auto;
+  .lg\:w-custom{
+    width: 48%;
+  }
+  .lg\:w-full{
+    width: 100%;
   }
   .lg\:w-max{
     width: -moz-max-content;
     width: max-content;
+  }
+  .lg\:w-3\/12{
+    width: 25%;
   }
   .lg\:max-w-screen-lg{
     max-width: 1024px;

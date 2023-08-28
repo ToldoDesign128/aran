@@ -2,11 +2,11 @@
 
 <main>
     <!-- Hero -->
-    <section class="w-full flex pt-24" style="height: 90vh;">
-        <div class="w-6/12">
+    <section class="w-full flex lg:flex-row flex-col pt-24" style="height: 90vh;">
+        <div class="lg:w-6/12 w-full">
             <?php the_post_thumbnail('thumb_xxlarge', ['class' => 'object-cover h-full']); ?>
         </div>
-        <div class="w-3/12 flex flex-col justify-center" style="margin-left: 8.33333%;">
+        <div class="lg:w-3/12 w-full flex flex-col justify-center" style="margin-left: 8.33333%;">
             <h2 class="text-3xl font-serif uppercase mb-12"><?php echo get_the_title(); ?></h2>
             <p>Composizioni disponibili</p>
             <p class="text-xl font-serif mt-4 mb-8"><?php echo esc_html(get_field('composizioni_disponibili')); ?></p>
