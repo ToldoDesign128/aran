@@ -20,11 +20,11 @@
                 $block_image = get_sub_field('immagine_blocco_testo_immagine'); ?>
 
                 <div class="blocco flex lg:flex-row flex-col flex-wrap justify-between items-center py-4">
-                    <div class="blocco__testo lg:w-5/12 w-full h-full flex flex-col my-4">
+                    <div class="blocco__testo lg:w-4/12 w-full h-full flex flex-col my-4">
                         <p class="xl:text-3xl text-2xl font-serif text-brown-aran my-5"><?php echo $block_title; ?></p>
                         <?php echo wpautop($block_text); ?>
                     </div>
-                    <div class="blocco__img lg:w-6/12 w-full">
+                    <div class="blocco__img lg:w-7/12 w-full">
                         <?php echo wp_get_attachment_image($block_image, 'thumb_xlarge'); ?>
                     </div>
                 </div>
