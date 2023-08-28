@@ -3,55 +3,29 @@
 <main class="py-24">
 
     <!-- intro -->
-    <section class="2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md md:m-auto md:px-8 px-4 py-12 flex flex-col items-center">
-        <h1 class="text-5xl font-serif uppercase mt-24 text-center"><?php echo esc_html(get_field('titolo_pagina_azienda')); ?></h1>
-        <p class="text-3xl font-serif mt-8 mb-24 text-center"><?php echo esc_html(get_field('testo_azienda_intro_azienda')); ?></p>
+    <section class="2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md md:m-auto md:px-8 px-4 lg:py-12 py-0 flex flex-col items-center">
+        <h1 class="xl:text-5xl lg:text-4xl text-3xl font-serif uppercase lg:mt-24 mt-12 text-center"><?php echo esc_html(get_field('titolo_pagina_azienda')); ?></h1>
+        <p class="xl:text-3xl text-2xl  font-serif mt-8 lg:mb-24 mb-12 text-center"><?php echo esc_html(get_field('testo_azienda_intro_azienda')); ?></p>
     </section>
 
     <!-- Testo Imagine -->
     <section class="2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md md:m-auto md:px-8 px-4">
         <?php
-        if (have_rows('blocco_testo_immagine_destra_azienda')) :
+        if (have_rows('blocco_testo_immagine_azienda')) :
 
-            while (have_rows('blocco_testo_immagine_destra_azienda')) : the_row();
+            while (have_rows('blocco_testo_immagine_azienda')) : the_row();
 
-                $block_dx_title = get_sub_field('titolo_blocco_testo_immagine_destra');
-                $block_dx_text = get_sub_field('testo_blocco_testo_immagine_destra');
-                $block_dx_image = get_sub_field('immagine_blocco_testo_immagine_destra'); ?>
+                $block_title = get_sub_field('titolo_blocco_testo_immagine');
+                $block_text = get_sub_field('testo_blocco_testo_immagine');
+                $block_image = get_sub_field('immagine_blocco_testo_immagine'); ?>
 
-                <div class="flex lg:flex-row flex-col flex-wrap justify-between items-center">
-                    <div class="lg:w-5/12 w-full h-full flex flex-col my-4 lg:order-1 order-2">
-                        <p class="text-3xl font-serif text-brown-aran my-5"><?php echo $block_dx_title; ?></p>
-                        <?php echo wpautop($block_dx_text); ?>
+                <div class="blocco flex lg:flex-row flex-col flex-wrap justify-between items-center py-4">
+                    <div class="blocco__testo lg:w-5/12 w-full h-full flex flex-col my-4">
+                        <p class="xl:text-3xl text-2xl font-serif text-brown-aran my-5"><?php echo $block_title; ?></p>
+                        <?php echo wpautop($block_text); ?>
                     </div>
-                    <div class="lg:w-6/12 w-full lg:order-2 order-1">
-                        <?php echo wp_get_attachment_image($block_dx_image, 'thumb_xlarge'); ?>
-                    </div>
-                </div>
-
-        <?php endwhile;
-        endif;
-        ?>
-    </section>
-
-    <!-- Testo Imagine -->
-    <section class="2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md md:m-auto md:px-8 px-4 my-12 lg:py-24 py-4">
-        <?php
-        if (have_rows('blocco_testo_immagine_sinistra_azienda')) :
-
-            while (have_rows('blocco_testo_immagine_sinistra_azienda')) : the_row();
-
-                $block_sx_title = get_sub_field('titolo_blocco_testo_immagine_sinistra');
-                $block_sx_text = get_sub_field('testo_blocco_testo_immagine_sinistra');
-                $block_sx_image = get_sub_field('immagine_blocco_testo_immagine_sinistra'); ?>
-
-                <div class="flex lg:flex-row flex-col flex-wrap justify-between items-center">
-                    <div class="lg:w-6/12 w-full">
-                        <?php echo wp_get_attachment_image($block_sx_image, 'thumb_xlarge'); ?>
-                    </div>
-                    <div class="lg:w-5/12 w-full h-full flex flex-col my-4">
-                        <p class="text-3xl font-serif text-brown-aran my-5"><?php echo $block_sx_title; ?></p>
-                        <?php echo wpautop($block_sx_text); ?>
+                    <div class="blocco__img lg:w-6/12 w-full">
+                        <?php echo wp_get_attachment_image($block_image, 'thumb_xlarge'); ?>
                     </div>
                 </div>
 
@@ -61,7 +35,7 @@
     </section>
 
     <!-- Banner -->
-    <section class="w-full bg-neutral-900 py-12">
+    <section class="w-full bg-neutral-900 lg:py-12 py-8">
         <div class="2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md md:m-auto md:px-8 px-4 py-12 flex flex-wrap lg:flex-row flex-col justify-between">
             <div class="lg:w-4/12 lg:py-px py-12 w-full">
                 <h2 class="xl:text-4xl lg:text-3xl text-2xl font-serif text-white uppercase"><?php echo esc_html(get_field('titolo_banner_azienda')); ?></h2>

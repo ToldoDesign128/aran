@@ -6,10 +6,10 @@
     <?php
         $image_hero_home = get_field('banner_promo');
         if (!empty($image_hero_home)) : ?>
-            <img src="<?php echo esc_url($image_hero_home['url']); ?>" alt="<?php echo esc_attr($image_hero_home['alt']); ?>" class="aspect-3/1 object-cover"/>
+            <img src="<?php echo esc_url($image_hero_home['url']); ?>" alt="<?php echo esc_attr($image_hero_home['alt']); ?>" class="lg:aspect-3/1 aspect-auto object-cover"/>
         <?php endif; ?>
 
-        <h1 class="xl:text-5xl lg:text-4xl text-3xl font-serif uppercase mt-24 text-center"><?php echo esc_html(get_field('titolo_offerte')); ?></h1>
+        <h1 class="xl:text-5xl lg:text-4xl text-2xl font-serif uppercase lg:mt-24 mt-12 text-center"><?php echo esc_html(get_field('titolo_offerte')); ?></h1>
         <p class="xl:text-3xl lg:text-2xl text-xl lg:w-3/5 w-full font-serif mt-8 text-center"><?php echo esc_html(get_field('testo_offerta')); ?></p>
         <!-- Cta -->
         <?php
@@ -19,7 +19,7 @@
                     $pulsante_title = $pulsante['title'];
                     $pulsante_target = $pulsante['target'] ? $pulsante['target'] : '_self';
         ?>
-            <a class="lg:w-max w-full text-sm uppercase tracking-wider my-12 py-4 px-8 border text-center md:hover:border-white md:hover:bg-dark-aran md:hover:text-white transition-all" href="<?php echo esc_url($pulsante_url); ?>" target="<?php echo esc_attr($pulsante_target); ?>"><?php echo esc_html($pulsante_title); ?></a>
+            <a class="lg:w-max w-full text-sm uppercase tracking-wider my-12 py-4 px-8 border border-dark-aran text-center md:hover:border-white md:hover:bg-dark-aran md:hover:text-white transition-all" href="<?php echo esc_url($pulsante_url); ?>" target="<?php echo esc_attr($pulsante_target); ?>"><?php echo esc_html($pulsante_title); ?></a>
         <?php endif; ?>
     </section>  
 </main>

@@ -1,12 +1,15 @@
 .contatti-footer{
+    @media (min-width: 768px) {
+        margin-left: calc(((99vw - 768px) / 2) + 2rem);
+    }
     @media (min-width: 1024px) {
-        margin-left: calc(calc(99vw - 1024px) / 2);
+        margin-left: calc(((99vw - 1024px) / 2) + 2rem);
     }
     @media (min-width: 1280px) {
-        margin-left: calc(calc(99vw - 1280px) / 2);
+        margin-left: calc(((99vw - 1280px) / 2) + 2rem);
     }
     @media (min-width: 1536px) {
-        margin-left: calc(calc(99vw - 1536px) / 2);
+        margin-left: calc(((99vw - 1536px) / 2) + 2rem);
     }
 }
 footer{
