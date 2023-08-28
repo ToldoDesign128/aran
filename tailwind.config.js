@@ -27,6 +27,10 @@ module.exports = {
         'light-grey-aran': '#EDEDED',
         'brown-aran': '#A19991',
       },
+      spacing: {
+        'custom': '48%',
+        'custom-30': '48%',
+      },
       aspectRatio: {
         '3/1': '3 / 1',
       },
