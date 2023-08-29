@@ -45,10 +45,10 @@
         <div class="flex flex-col">
             <?php
             // Check rows existexists.
-            if (have_rows('repeater_faq_living', 285)) :
+            if (have_rows('living_faq', 285)) :
 
                 // Loop through rows.
-                while (have_rows('repeater_faq_living', 285)) : the_row();
+                while (have_rows('living_faq', 285)) : the_row();
 
                     // Load sub field value.
                     $domanda_living = get_sub_field('domanda_faq_living');
