@@ -29,7 +29,7 @@ module.exports = {
       },
       spacing: {
         'custom': '48%',
-        'custom-30': '48%',
+        'custom-32': '32%',
       },
       aspectRatio: {
         '3/1': '3 / 1',

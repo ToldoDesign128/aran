@@ -657,9 +657,6 @@ video {
 .w-2\/12{
   width: 16.666667%;
 }
-.w-3\/12{
-  width: 25%;
-}
 .w-4\/12{
   width: 33.333333%;
 }
@@ -686,9 +683,6 @@ video {
 }
 .w-auto{
   width: auto;
-}
-.w-custom-30{
-  width: 48%;
 }
 .w-full{
   width: 100%;
@@ -1358,6 +1352,9 @@ header nav .menu-item {
   .lg\:h-screen{
     height: 100vh;
   }
+  .lg\:w-3\/12{
+    width: 25%;
+  }
   .lg\:w-3\/5{
     width: 60%;
   }
@@ -1379,15 +1376,12 @@ header nav .menu-item {
   .lg\:w-custom{
     width: 48%;
   }
-  .lg\:w-full{
-    width: 100%;
-  }
   .lg\:w-max{
     width: -moz-max-content;
     width: max-content;
   }
-  .lg\:w-3\/12{
-    width: 25%;
+  .lg\:w-custom-32{
+    width: 32%;
   }
   .lg\:max-w-screen-lg{
     max-width: 1024px;
