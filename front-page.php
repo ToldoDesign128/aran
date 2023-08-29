@@ -21,7 +21,7 @@
     </section>
 
     <!-- Sezione 1 -->
-    <section id="image-section-home" class="w-full py-24 text-center flex flex-col items-center relative overflow-x-hidden">
+    <section id="image-section-home" class="w-full py-24 text-center flex flex-col items-center relative overflow-x-hidden overflow-y-hidden">
         <p class="lg:block hidden absolute text-9xl font-serif uppercase text-stone-100 tracking-widest z-0">Made in Italy</p>
         <h2 class="lg:w-6/12 w-full xl:text-5xl lg:text-4xl text-3xl font-serif uppercase lg:mt-24 mt-0 z-10"><?php the_field('titolo_sezione_home'); ?></h2>
 
@@ -130,11 +130,11 @@
             </div>
             <!-- Custom Arrow -->
             <div class="splide__arrows">
-                <button class="splide__arrow splide__arrow--prev">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/img/arrowsx.svg'; ?>" class="h-12 z-40"></img>
+                <button class="splide__arrow splide__arrow--prev z-40">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/img/arrowsx.svg'; ?>" class="h-12"></img>
                 </button>
-                <button class="splide__arrow splide__arrow--next">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/img/arrowdx.svg'; ?>" class="h-12 z-40"></img>
+                <button class="splide__arrow splide__arrow--next z-40">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/img/arrowdx.svg'; ?>" class="h-12"></img>
                 </button>
             </div>
             <span class="slider__line absolute w-px bg-brown-aran top-0 z-10"></span>
