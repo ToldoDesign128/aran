@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta name="robots" content="noindex">
+  <head>
+    <meta name="robots" content="noindex" />
     <style type="text/css">
-        /* Set a size for our map container, the Google Map will take up 100% of this container */
+      /* Set a size for our map container, the Google Map will take up 100% of this container */
 
-        body,html{width:100%;height:100%;padding:0px;margin:0px;}
+      body,
+      html {
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+        margin: 0px;
+      }
 
-        #map {
-            width: 100%;
-            height: 100%;
-        }
+      #map {
+        width: 100%;
+        height: 100%;
+      }
 
-        svg{width:40px;height:auto;}
-
+      svg {
+        width: 40px;
+        height: auto;
+      }
     </style>
 
     <!--
@@ -28,81 +36,258 @@
             <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_API_KEY&sensor=false"></script>
     -->
 
+    <!-- VIA DEL LAVORO 39 VERONA -->
+  </head>
+  <body>
+    <!-- The element that will contain our Google Map. This is used in both the Javascript and CSS above. -->
+    <div id="map"></div>
 
-<!-- VIA DEL LAVORO 39 VERONA -->
+    <script type="text/javascript">
+      // When the window has finished loading create our google map below
 
-
-
-</head>
-<body>
-
-<!-- The element that will contain our Google Map. This is used in both the Javascript and CSS above. -->
-<div id="map"></div>
-
-<script type="text/javascript">
-    // When the window has finished loading create our google map below
-
-    function initMap() {
+      function initMap() {
         // Basic options for a simple Google Map
         // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
         var mapOptions = {
-            // How zoomed in you want the map to start at (always required)
-            zoom: 17,
-            disableDefaultUI: false,
-            scrollwheel: false,
-            navigationControl: false,
-            mapTypeControl: false,
-            scaleControl: true,
-            // The latitude and longitude to center the map (always required)
-            center: new google.maps.LatLng(46.04332565137372, 11.146101224231293), // New York
-            mapTypeId: 'satellite',
+          // How zoomed in you want the map to start at (always required)
+          zoom: 17,
+          disableDefaultUI: false,
+          scrollwheel: false,
+          navigationControl: false,
+          mapTypeControl: false,
+          scaleControl: true,
+          // The latitude and longitude to center the map (always required)
+          center: new google.maps.LatLng(46.04332565137372, 11.146101224231293), // New York
+          mapTypeId: "satellite",
 
-            // How you would like to style the map.
-            // This is where you would paste any style found on Snazzy Maps.
-            styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#46bcec"},{"visibility":"on"}]}]
+          // How you would like to style the map.
+          // This is where you would paste any style found on Snazzy Maps.
+          styles: [
+            {
+              featureType: "water",
+              elementType: "geometry",
+              stylers: [
+                {
+                  color: "#e9e9e9",
+                },
+                {
+                  lightness: 17,
+                },
+              ],
+            },
+            {
+              featureType: "landscape",
+              elementType: "geometry",
+              stylers: [
+                {
+                  color: "#f5f5f5",
+                },
+                {
+                  lightness: 20,
+                },
+              ],
+            },
+            {
+              featureType: "road.highway",
+              elementType: "geometry.fill",
+              stylers: [
+                {
+                  color: "#ffffff",
+                },
+                {
+                  lightness: 17,
+                },
+              ],
+            },
+            {
+              featureType: "road.highway",
+              elementType: "geometry.stroke",
+              stylers: [
+                {
+                  color: "#ffffff",
+                },
+                {
+                  lightness: 29,
+                },
+                {
+                  weight: 0.2,
+                },
+              ],
+            },
+            {
+              featureType: "road.arterial",
+              elementType: "geometry",
+              stylers: [
+                {
+                  color: "#ffffff",
+                },
+                {
+                  lightness: 18,
+                },
+              ],
+            },
+            {
+              featureType: "road.local",
+              elementType: "geometry",
+              stylers: [
+                {
+                  color: "#ffffff",
+                },
+                {
+                  lightness: 16,
+                },
+              ],
+            },
+            {
+              featureType: "poi",
+              elementType: "geometry",
+              stylers: [
+                {
+                  color: "#f5f5f5",
+                },
+                {
+                  lightness: 21,
+                },
+              ],
+            },
+            {
+              featureType: "poi.park",
+              elementType: "geometry",
+              stylers: [
+                {
+                  color: "#dedede",
+                },
+                {
+                  lightness: 21,
+                },
+              ],
+            },
+            {
+              elementType: "labels.text.stroke",
+              stylers: [
+                {
+                  visibility: "on",
+                },
+                {
+                  color: "#ffffff",
+                },
+                {
+                  lightness: 16,
+                },
+              ],
+            },
+            {
+              elementType: "labels.text.fill",
+              stylers: [
+                {
+                  saturation: 36,
+                },
+                {
+                  color: "#333333",
+                },
+                {
+                  lightness: 40,
+                },
+              ],
+            },
+            {
+              elementType: "labels.icon",
+              stylers: [
+                {
+                  visibility: "off",
+                },
+              ],
+            },
+            {
+              featureType: "transit",
+              elementType: "geometry",
+              stylers: [
+                {
+                  color: "#f2f2f2",
+                },
+                {
+                  lightness: 19,
+                },
+              ],
+            },
+            {
+              featureType: "administrative",
+              elementType: "geometry.fill",
+              stylers: [
+                {
+                  color: "#fefefe",
+                },
+                {
+                  lightness: 20,
+                },
+              ],
+            },
+            {
+              featureType: "administrative",
+              elementType: "geometry.stroke",
+              stylers: [
+                {
+                  color: "#fefefe",
+                },
+                {
+                  lightness: 17,
+                },
+                {
+                  weight: 1.2,
+                },
+              ],
+            },
+          ],
         };
 
         // Get the HTML DOM element that will contain your map
         // We are using a div with id="map" seen below in the <body>
-        var mapElement = document.getElementById('map');
+        var mapElement = document.getElementById("map");
 
         // Create the Google Map using our element and options defined above
         var map = new google.maps.Map(mapElement, mapOptions);
 
         // Let's also add a marker while we're at it
         var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(46.04332565137372, 11.146101224231293),
-            scaledSize: new google.maps.Size(50, 50),
-            map: map,
-            animation: google.maps.Animation.DROP,
-            icon: '/images/map-cursor.svg',
+          position: new google.maps.LatLng(
+            46.04332565137372,
+            11.146101224231293
+          ),
+          scaledSize: new google.maps.Size(50, 50),
+          map: map,
+          animation: google.maps.Animation.DROP,
+          icon: "/images/map-cursor.svg",
         });
 
-        google.maps.event.addDomListener(window, 'resize', function() {
+        google.maps.event.addDomListener(window, "resize", function () {
+          var w = window,
+            d = document,
+            e = d.documentElement,
+            g = d.getElementsByTagName("body")[0],
+            x = w.innerWidth || e.clientWidth || g.clientWidth,
+            y = w.innerHeight || e.clientHeight || g.clientHeight;
 
-            var w=window,
-                d=document,
-                e=d.documentElement,
-                g=d.getElementsByTagName('body')[0],
-                x=w.innerWidth||e.clientWidth||g.clientWidth,
-                y=w.innerHeight||e.clientHeight||g.clientHeight;
-
-            if(x<768){
-                var center = new google.maps.LatLng(46.04332565137372, 11.146101224231293);
-                map.setCenter(center);
-            }else{
-                var center = new google.maps.LatLng(46.04332565137372, 11.146101224231293);
-                map.setCenter(center);
-            }
-
+          if (x < 768) {
+            var center = new google.maps.LatLng(
+              46.04332565137372,
+              11.146101224231293
+            );
+            map.setCenter(center);
+          } else {
+            var center = new google.maps.LatLng(
+              46.04332565137372,
+              11.146101224231293
+            );
+            map.setCenter(center);
+          }
         });
+      }
+    </script>
 
-    }
-
-
-
-</script>
-
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0D9hoEWeUUcU6joOUJWvfvNqvcMhCAJg&callback=initMap"></script>
-</body>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcyxgLiIPqC3s2uxi7tUh_6llUdIguRts&callback=initMap"
+    ></script>
+  </body>
 </html>

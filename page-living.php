@@ -51,7 +51,7 @@
                 while (have_rows('living_faq', 285)) : the_row();
 
                     // Load sub field value.
-                    $domanda_living = get_sub_field('titolo_faq_living');
+                    $domanda_living = get_sub_field('domanda_living_faq');
                     $risposta_living = get_sub_field('risposta_living_faq'); ?>
 
                     <div class="accordion bg-light-grey-aran my-2 px-6 py-4">

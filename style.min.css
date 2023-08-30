@@ -494,12 +494,6 @@ video {
 .z-40{
   z-index: 40;
 }
-.z-50{
-  z-index: 50;
-}
-.z-\[50\]{
-  z-index: 50;
-}
 .m-auto{
   margin: auto;
 }
@@ -1261,12 +1255,53 @@ header nav .menu-item {
   display: flex;
 }
 
+input {
+  text-align: center;
+}
+input ::-moz-placeholder {
+  font-size: 18px;
+  font-weight: 400;
+}
+input ::placeholder {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+input[type=submit] {
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 3rem 0;
+  padding: 1rem 2rem;
+  border: 1px solid #1d1d1b;
+  transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+@media (min-width: 1024px) {
+  input[type=submit]:hover {
+    background-color: #1d1d1b;
+    color: white;
+  }
+}
+textarea {
+  text-align: center;
+}
+textarea ::-moz-placeholder {
+  font-size: 18px;
+  font-weight: 400;
+}
+textarea ::placeholder {
+  font-size: 18px;
+  font-weight: 400;
+}
 @media (min-width: 640px){
   .sm\:max-w-screen-sm{
     max-width: 640px;
   }
 }
-
 @media (min-width: 768px){
   .md\:m-auto{
     margin: auto;
@@ -1314,7 +1349,6 @@ header nav .menu-item {
     color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 }
-
 @media (min-width: 1024px){
   .lg\:my-24{
     margin-top: 6rem;
@@ -1327,6 +1361,9 @@ header nav .menu-item {
   .lg\:my-auto{
     margin-top: auto;
     margin-bottom: auto;
+  }
+  .lg\:mb-12{
+    margin-bottom: 3rem;
   }
   .lg\:mb-24{
     margin-bottom: 6rem;
@@ -1450,7 +1487,6 @@ header nav .menu-item {
     line-height: 2.5rem;
   }
 }
-
 @media (min-width: 1280px){
   .xl\:w-4\/12{
     width: 33.333333%;
@@ -1487,7 +1523,6 @@ header nav .menu-item {
     line-height: 1;
   }
 }
-
 @media (min-width: 1536px){
   .\32xl\:max-w-screen-2xl{
     max-width: 1536px;

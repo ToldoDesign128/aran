@@ -14,7 +14,9 @@ module.exports = {
     'page-catalogo.php',
     'page-consulenza.php',
     'page-contatti.php',
+    'page-thanks.php',
     'single.php',
+    '404.php'
   ],
   theme: {
       fontFamily: {
