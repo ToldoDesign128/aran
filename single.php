@@ -55,6 +55,10 @@
                     </ul>
                 <?php endif; ?>
             </div>
+            <!-- Add the progress bar element -->
+            <div class="my-slider-progress">
+                <div class="my-slider-progress-bar"></div>
+            </div>
             <!-- Custom Arrow -->
             <div class="splide__arrows">
                 <button class="splide__arrow splide__arrow--prev">

@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
+    'template-parts/banner-offerte.php',
     'header.php',
     'footer.php',
     'home.php',
