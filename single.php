@@ -40,7 +40,7 @@
         </div>
     </section>
     <section class="py-20">
-        <div class="splide relative">
+        <div id="slider-base" class="splide relative">
             <div class="splide__track">
                 <?php
                 $images_single = get_field('slider_single');

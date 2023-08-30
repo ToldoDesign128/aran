@@ -30,4 +30,16 @@
       display: block;
     }
   }
+  .my-slider-progress {
+    background: #ccc;
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .my-slider-progress-bar {
+    background: #1D1D1B;
+    height: 2px;
+    transition: width 400ms ease;
+    width: 0;
+  }
 }

@@ -491,32 +491,11 @@ video {
 .top-0{
   top: 0px;
 }
-.top-\[27\%\]{
-  top: 27%;
-}
-.top-\[28\%\]{
-  top: 28%;
-}
-.top-\[37\%\]{
-  top: 37%;
-}
-.top-\[38\%\]{
-  top: 38%;
-}
-.top-\[47\%\]{
-  top: 47%;
-}
 .top-\[42\%\]{
   top: 42%;
 }
 .top-\[43\%\]{
   top: 43%;
-}
-.top-\[52\%\]{
-  top: 52%;
-}
-.top-\[55\%\]{
-  top: 55%;
 }
 .top-\[60\%\]{
   top: 60%;
@@ -567,9 +546,9 @@ video {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
-.my-20{
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+.my-24{
+  margin-top: 6rem;
+  margin-bottom: 6rem;
 }
 .my-3{
   margin-top: 0.75rem;
@@ -590,10 +569,6 @@ video {
 .my-8{
   margin-top: 2rem;
   margin-bottom: 2rem;
-}
-.my-24{
-  margin-top: 6rem;
-  margin-bottom: 6rem;
 }
 .mb-12{
   margin-bottom: 3rem;
@@ -667,26 +642,17 @@ video {
 .h-96{
   height: 24rem;
 }
+.h-\[60vh\]{
+  height: 60vh;
+}
+.h-\[65vh\]{
+  height: 65vh;
+}
 .h-full{
   height: 100%;
 }
 .h-px{
   height: 1px;
-}
-.h-\[90vh\]{
-  height: 90vh;
-}
-.h-\[80vh\]{
-  height: 80vh;
-}
-.h-\[70vh\]{
-  height: 70vh;
-}
-.h-\[65vh\]{
-  height: 65vh;
-}
-.h-\[60vh\]{
-  height: 60vh;
 }
 .max-h-4{
   max-height: 1rem;
@@ -1139,10 +1105,15 @@ video {
 }
 
 .archive_line_title {
-  top: 50%;
+  top: 30%;
   left: 0;
 }
 @media (min-width: 1024px) {
+  .archive_line_title {
+    top: 50%;
+  }
+}
+@media (min-width: 1280px) {
   .archive_line_title {
     top: 65%;
   }
@@ -1226,6 +1197,17 @@ footer .current-menu-item ::after {
   .splide .slider__line2 {
     display: block;
   }
+}
+.splide .my-slider-progress {
+  background: #ccc;
+  max-width: 400px;
+  margin: auto;
+}
+.splide .my-slider-progress-bar {
+  background: #1D1D1B;
+  height: 2px;
+  transition: width 400ms ease;
+  width: 0;
 }
 
 header nav .menu-item {
@@ -1397,14 +1379,14 @@ textarea ::placeholder {
   .lg\:h-48{
     height: 12rem;
   }
+  .lg\:h-\[130vh\]{
+    height: 130vh;
+  }
   .lg\:h-auto{
     height: auto;
   }
   .lg\:h-screen{
     height: 100vh;
-  }
-  .lg\:h-\[130vh\]{
-    height: 130vh;
   }
   .lg\:w-3\/12{
     width: 25%;
@@ -1597,15 +1579,6 @@ textarea ::placeholder {
   }
   .\32xl\:top-\[67\%\]{
     top: 67%;
-  }
-  .\32xl\:top-\[77\%\]{
-    top: 77%;
-  }
-  .\32xl\:top-\[80\%\]{
-    top: 80%;
-  }
-  .\32xl\:top-\[85\%\]{
-    top: 85%;
   }
   .\32xl\:top-\[90\%\]{
     top: 90%;
