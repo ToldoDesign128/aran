@@ -3,7 +3,7 @@
 <main class="py-24">
 
     <section class="2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md md:m-auto md:px-8 px-4 pt-12 flex flex-col items-center">
-        <div id="slider" class="splide">
+        <div class="splide">
             <div class="splide__track">
                 <?php
                 $images_banner_offerta = get_field('banner_promo');
