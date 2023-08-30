@@ -8,9 +8,9 @@
         </div>
         <div class="lg:w-3/12 w-full flex flex-col justify-center" style="margin-left: 8.33333%;">
             <h2 class="text-3xl font-serif uppercase mb-12"><?php echo get_the_title(); ?></h2>
-            <p>Composizioni disponibili</p>
+            <p><?php echo esc_html(get_field('sottotitolo_1')); ?></p>
             <p class="text-xl font-serif mt-4 mb-8"><?php echo esc_html(get_field('composizioni_disponibili')); ?></p>
-            <p><?php echo esc_html(get_field('sottotitolo')); ?></p>
+            <p><?php echo esc_html(get_field('sottotitolo_2')); ?></p>
             <p class="text-xl font-serif mt-4 mb-8"><?php echo esc_html(get_field('sottotitolo_testo')); ?></p>
         </div>
     </section>

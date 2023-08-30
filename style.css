@@ -476,11 +476,50 @@ video {
 .left-0{
   left: 0px;
 }
+.left-\[1rem\]{
+  left: 1rem;
+}
+.right-0{
+  right: 0px;
+}
 .right-32{
   right: 8rem;
 }
+.right-\[1rem\]{
+  right: 1rem;
+}
 .top-0{
   top: 0px;
+}
+.top-\[27\%\]{
+  top: 27%;
+}
+.top-\[28\%\]{
+  top: 28%;
+}
+.top-\[37\%\]{
+  top: 37%;
+}
+.top-\[38\%\]{
+  top: 38%;
+}
+.top-\[47\%\]{
+  top: 47%;
+}
+.top-\[42\%\]{
+  top: 42%;
+}
+.top-\[43\%\]{
+  top: 43%;
+}
+.top-\[52\%\]{
+  top: 52%;
+}
+.top-\[55\%\]{
+  top: 55%;
+}
+.top-\[60\%\]{
+  top: 60%;
 }
 .z-0{
   z-index: 0;
@@ -493,6 +532,9 @@ video {
 }
 .z-40{
   z-index: 40;
+}
+.z-\[-10\]{
+  z-index: -10;
 }
 .m-auto{
   margin: auto;
@@ -548,6 +590,10 @@ video {
 .my-8{
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+.my-24{
+  margin-top: 6rem;
+  margin-bottom: 6rem;
 }
 .mb-12{
   margin-bottom: 3rem;
@@ -627,6 +673,21 @@ video {
 .h-px{
   height: 1px;
 }
+.h-\[90vh\]{
+  height: 90vh;
+}
+.h-\[80vh\]{
+  height: 80vh;
+}
+.h-\[70vh\]{
+  height: 70vh;
+}
+.h-\[65vh\]{
+  height: 65vh;
+}
+.h-\[60vh\]{
+  height: 60vh;
+}
 .max-h-4{
   max-height: 1rem;
 }
@@ -641,6 +702,12 @@ video {
 }
 .max-h-8{
   max-height: 2rem;
+}
+.max-h-\[12rem\]{
+  max-height: 12rem;
+}
+.max-h-\[4rem\]{
+  max-height: 4rem;
 }
 .w-0{
   width: 0px;
@@ -690,11 +757,20 @@ video {
 .w-px{
   width: 1px;
 }
+.max-w-\[16rem\]{
+  max-width: 16rem;
+}
 .max-w-\[25ch\]{
   max-width: 25ch;
 }
 .max-w-\[40ch\]{
   max-width: 40ch;
+}
+.max-w-\[4rem\]{
+  max-width: 4rem;
+}
+.max-w-\[5rem\]{
+  max-width: 5rem;
 }
 .max-w-screen-xl{
   max-width: 1280px;
@@ -1120,77 +1196,6 @@ footer .current-menu-item ::after {
   background-color: black;
 }
 
-#image-section-home {
-  height: 130vh;
-}
-#image-section-home ul li img {
-  top: 25%;
-  left: 4%;
-  min-height: auto;
-  max-width: 16rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-  z-index: 20;
-}
-@media (min-width: 1024px) {
-  #image-section-home ul li img {
-    top: 25%;
-    left: 2%;
-    min-height: 25rem;
-    max-width: 20rem;
-  }
-}
-#image-section-home ul :nth-child(2) img {
-  top: 22%;
-  left: 74%;
-  min-height: auto;
-  max-width: 10rem;
-}
-@media (min-width: 1024px) {
-  #image-section-home ul :nth-child(2) img {
-    top: 40%;
-    left: 30%;
-    min-height: 25rem;
-    max-width: 39rem;
-  }
-}
-#image-section-home ul :nth-child(3) img {
-  top: 35%;
-  left: 75%;
-  min-height: 10rem;
-  max-width: 10rem;
-}
-@media (min-width: 1024px) {
-  #image-section-home ul :nth-child(3) img {
-    top: 30%;
-  }
-}
-#image-section-home ul :nth-child(4) img {
-  display: none;
-  top: 85%;
-  left: 5%;
-  min-height: 10rem;
-  max-width: 20rem;
-}
-@media (min-width: 1024px) {
-  #image-section-home ul :nth-child(4) img {
-    display: block;
-  }
-}
-#image-section-home ul :nth-child(5) img {
-  display: none;
-  top: 65%;
-  right: 0;
-  left: auto;
-  min-height: 25rem;
-  max-width: 15rem;
-}
-@media (min-width: 1024px) {
-  #image-section-home ul :nth-child(5) img {
-    display: block;
-  }
-}
-
 .splide__slide {
   max-width: 700px;
 }
@@ -1398,6 +1403,9 @@ textarea ::placeholder {
   .lg\:h-screen{
     height: 100vh;
   }
+  .lg\:h-\[130vh\]{
+    height: 130vh;
+  }
   .lg\:w-3\/12{
     width: 25%;
   }
@@ -1488,12 +1496,66 @@ textarea ::placeholder {
   }
 }
 @media (min-width: 1280px){
+  .xl\:left-\[2\%\]{
+    left: 2%;
+  }
+  .xl\:left-\[5\%\]{
+    left: 5%;
+  }
+  .xl\:left-auto{
+    left: auto;
+  }
+  .xl\:right-\[0\%\]{
+    right: 0%;
+  }
+  .xl\:right-\[5\%\]{
+    right: 5%;
+  }
+  .xl\:top-\[20\%\]{
+    top: 20%;
+  }
+  .xl\:top-\[30\%\]{
+    top: 30%;
+  }
+  .xl\:top-\[35\%\]{
+    top: 35%;
+  }
+  .xl\:top-\[70\%\]{
+    top: 70%;
+  }
+  .xl\:top-\[80\%\]{
+    top: 80%;
+  }
+  .xl\:max-h-\[12rem\]{
+    max-height: 12rem;
+  }
+  .xl\:max-h-\[24rem\]{
+    max-height: 24rem;
+  }
+  .xl\:max-h-\[28rem\]{
+    max-height: 28rem;
+  }
   .xl\:w-4\/12{
     width: 33.333333%;
   }
   .xl\:w-max{
     width: -moz-max-content;
     width: max-content;
+  }
+  .xl\:max-w-\[12rem\]{
+    max-width: 12rem;
+  }
+  .xl\:max-w-\[14rem\]{
+    max-width: 14rem;
+  }
+  .xl\:max-w-\[15rem\]{
+    max-width: 15rem;
+  }
+  .xl\:max-w-\[20rem\]{
+    max-width: 20rem;
+  }
+  .xl\:max-w-\[42rem\]{
+    max-width: 42rem;
   }
   .xl\:max-w-screen-xl{
     max-width: 1280px;
@@ -1524,7 +1586,59 @@ textarea ::placeholder {
   }
 }
 @media (min-width: 1536px){
+  .\32xl\:top-\[15\%\]{
+    top: 15%;
+  }
+  .\32xl\:top-\[27\%\]{
+    top: 27%;
+  }
+  .\32xl\:top-\[32\%\]{
+    top: 32%;
+  }
+  .\32xl\:top-\[67\%\]{
+    top: 67%;
+  }
+  .\32xl\:top-\[77\%\]{
+    top: 77%;
+  }
+  .\32xl\:top-\[80\%\]{
+    top: 80%;
+  }
+  .\32xl\:top-\[85\%\]{
+    top: 85%;
+  }
+  .\32xl\:top-\[90\%\]{
+    top: 90%;
+  }
+  .\32xl\:max-h-\[16rem\]{
+    max-height: 16rem;
+  }
+  .\32xl\:max-h-\[30rem\]{
+    max-height: 30rem;
+  }
+  .\32xl\:max-h-\[34rem\]{
+    max-height: 34rem;
+  }
+  .\32xl\:max-w-\[16rem\]{
+    max-width: 16rem;
+  }
+  .\32xl\:max-w-\[18rem\]{
+    max-width: 18rem;
+  }
+  .\32xl\:max-w-\[20rem\]{
+    max-width: 20rem;
+  }
+  .\32xl\:max-w-\[26rem\]{
+    max-width: 26rem;
+  }
+  .\32xl\:max-w-\[48rem\]{
+    max-width: 48rem;
+  }
   .\32xl\:max-w-screen-2xl{
     max-width: 1536px;
+  }
+  .\32xl\:text-5xl{
+    font-size: 3rem;
+    line-height: 1;
   }
 }
