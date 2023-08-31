@@ -8,7 +8,7 @@ mix.sass('assets/scss/style.scss', 'style.css')
   .tailwind('tailwind.config.js');
 mix.sass('assets/scss/hamburgers.scss', 'hamburgers.css');
 
-mix.combine(['assets/js/main.js', 'assets/js/form-consulenza.js'], 'script.js');
+mix.combine(['assets/js/main.js'], 'script.js');
 
 mix.webpackConfig({
   watchOptions: {

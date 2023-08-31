@@ -798,6 +798,9 @@ video {
 .border-b{
   border-bottom-width: 1px;
 }
+.border-b-2{
+  border-bottom-width: 2px;
+}
 .border-dark-aran{
   --tw-border-opacity: 1;
   border-color: rgb(29 29 27 / var(--tw-border-opacity));
@@ -809,6 +812,18 @@ video {
 .border-white{
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+.border-black{
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+.border-b-dark-aran{
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(29 29 27 / var(--tw-border-opacity));
+}
+.border-b-black{
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 .bg-brown-aran{
   --tw-bg-opacity: 1;
@@ -1310,6 +1325,9 @@ button:focus {
 #FormConsulenza textarea:focus,
 #FormConsulenza button:focus {
   outline: none;
+}
+#FormConsulenza .vanilla-calendar-month, #FormConsulenza .vanilla-calendar-year {
+  font-family: "Bodoni Moda", serif;
 }
 @media (min-width: 640px){
   .sm\:max-w-screen-sm{
