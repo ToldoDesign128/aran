@@ -651,6 +651,9 @@ video {
 .h-px{
   height: 1px;
 }
+.h-screen{
+  height: 100vh;
+}
 .max-h-4{
   max-height: 1rem;
 }
@@ -669,14 +672,11 @@ video {
 .max-h-\[12rem\]{
   max-height: 12rem;
 }
-.max-h-\[400px\]{
-  max-height: 400px;
+.max-h-\[200px\]{
+  max-height: 200px;
 }
 .max-h-\[4rem\]{
   max-height: 4rem;
-}
-.max-h-\[200px\]{
-  max-height: 200px;
 }
 .w-0{
   width: 0px;
@@ -740,6 +740,9 @@ video {
 }
 .max-w-\[5rem\]{
   max-width: 5rem;
+}
+.max-w-none{
+  max-width: none;
 }
 .max-w-screen-xl{
   max-width: 1280px;
@@ -1287,6 +1290,24 @@ textarea ::placeholder {
   font-size: 18px;
   font-weight: 400;
 }
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+#FormConsulenza input {
+  padding: 1rem 2rem;
+  border-bottom: 1px solid black;
+}
+#FormConsulenza input:focus,
+#FormConsulenza select:focus,
+#FormConsulenza textarea:focus,
+#FormConsulenza button:focus {
+  outline: none;
+}
 @media (min-width: 640px){
   .sm\:max-w-screen-sm{
     max-width: 640px;
@@ -1421,6 +1442,9 @@ textarea ::placeholder {
   .lg\:w-max{
     width: -moz-max-content;
     width: max-content;
+  }
+  .lg\:max-w-\[60\%\]{
+    max-width: 60%;
   }
   .lg\:max-w-screen-lg{
     max-width: 1024px;
