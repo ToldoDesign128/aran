@@ -74,6 +74,35 @@
 
     </section>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () =>
+            (!!Splide) && (new Splide('#slider-base', {
+                type: 'loop',
+                padding: '5rem',
+                focus: 'center',
+                trimSpace: false,
+                gap: 300,
+                breakpoints: {
+                    1024: {
+                        padding: '1.2rem',
+                        gap: 10
+                    },
+                },
+            })).mount());
+
+        // Slider progress bar
+
+        var bar = slider.root.querySelector('.my-slider-progress-bar');
+
+        // Updates the bar width whenever the carousel moves:
+        slider.on('mounted move', function() {
+            var end = slider.Components.Controller.getEnd() + 1;
+            var rate = Math.min((slider.index + 1) / end, 1);
+            bar.style.width = String(100 * rate) + '%';
+        });
+    </script>
+
 </main>
+
 
 <?php get_footer(); ?>
