@@ -639,6 +639,9 @@ video {
 .h-96{
   height: 24rem;
 }
+.h-\[472px\]{
+  height: 472px;
+}
 .h-\[60vh\]{
   height: 60vh;
 }
@@ -1184,32 +1187,32 @@ footer .current-menu-item ::after {
   width: auto;
   height: auto;
 }
-#slider-base .splide .slider__line {
+#slider-base .slider__line {
   display: none;
   height: 472px;
   left: 17%;
 }
 @media (min-width: 1024px) {
-  #slider-base .splide .slider__line {
+  #slider-base .slider__line {
     display: block;
   }
 }
-#slider-base .splide .slider__line2 {
+#slider-base .slider__line2 {
   display: none;
   height: 472px;
   right: 17%;
 }
 @media (min-width: 1024px) {
-  #slider-base .splide .slider__line2 {
+  #slider-base .slider__line2 {
     display: block;
   }
 }
-#slider-base .splide .my-slider-progress {
+#slider-base .my-slider-progress {
   background: #ccc;
   max-width: 400px;
   margin: auto;
 }
-#slider-base .splide .my-slider-progress-bar {
+#slider-base .my-slider-progress-bar {
   background: #1D1D1B;
   height: 2px;
   transition: width 400ms ease;

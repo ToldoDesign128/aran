@@ -118,8 +118,8 @@
             <h4 class="lg:w-4/12 w-full xl:text-4xl text-3xl font-serif uppercase lg:mt-24 mt-12 z-10"><?php the_field('titolo_sezione_3_home'); ?></h4>
         </div>
         <!-- Gallery -->
-        <section class="lg:py-20 py-8 z-10">
-            <div id="slider-base" class="splide relative">
+        <section class="lg:py-20 py-8 relative z-10">
+            <div id="slider-base" class="splide">
                 <div class="splide__track z-20">
                     <?php
                     $rows_slide = get_field('slide_sezione_3_home');
@@ -151,8 +151,8 @@
                         <img src="<?php echo get_template_directory_uri() . '/assets/img/arrowdx.svg'; ?>" class="h-12"></img>
                     </button>
                 </div>
-                <span class="slider__line absolute w-px bg-brown-aran top-0 z-10"></span>
-                <span class="slider__line2 absolute w-px bg-brown-aran top-0 z-10"></span>
+                <span class="slider__line absolute w-px h-[472px] bg-brown-aran top-0 z-10"></span>
+                <span class="slider__line2 absolute w-px h-[472px] bg-brown-aran top-0 z-10"></span>
             </div>
 
         </section>

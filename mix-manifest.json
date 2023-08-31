@@ -1,8 +1,5 @@
 {
     "/style.css": "/style.css",
     "/hamburgers.css": "/hamburgers.css",
-    "/style.min.css": "/style.min.css",
-    "/hamburgers.min.css": "/hamburgers.min.css",
-    "/script.js": "/script.js",
-    "/script.min.js": "/script.min.js"
+    "/script.js": "/script.js"
 }
