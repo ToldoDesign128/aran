@@ -26,10 +26,14 @@
   }
 
 .archive_line_title{
-    top: 50%;
+    top: 30%;
     left: 0;
     
     @media (min-width: 1024px) {
+      top: 50%;
+    }
+    
+    @media (min-width: 1280px) {
       top: 65%;
     }
 }

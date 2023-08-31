@@ -2,7 +2,7 @@
 
 <main>
     <!-- Hero -->
-    <section class="relative w-full lg:h-screen text-center flex flex-col items-center lg:mt-0 mt-20" style=" @media (max-width: 1024px){height: 500px;}">
+    <section class="relative w-full lg:h-screen h-[60vh] text-center flex flex-col items-center lg:mt-0 mt-20">
 
         <!-- background hero -->
         <span class="w-full bg-neutral-500 h-full absolute z-0"></span>
@@ -12,7 +12,7 @@
             <img src="<?php echo esc_url($image_hero_home['url']); ?>" alt="<?php echo esc_attr($image_hero_home['alt']); ?>" class="w-full mix-blend-multiply h-full object-cover absolute z-0" />
         <?php endif; ?>
 
-        <div class="2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg max-w-screen mx-auto lg:my-auto my-20 md:px-8 px-4 z-10">
+        <div class="2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg max-w-screen mx-auto lg:my-auto my-24 md:px-8 px-4 z-10">
             <h1 class="xl:text-6xl text-4xl font-serif text-white uppercase my-5 z-10"><?php echo esc_html(get_field('titolo_hero_home')); ?></h1>
             <p class="text-white text-lg z-10"><?php echo esc_html(get_field('testo_hero_home')); ?></p>
         </div>
@@ -21,29 +21,39 @@
     </section>
 
     <!-- Sezione 1 -->
-    <section id="image-section-home" class="w-full py-24 text-center flex flex-col items-center relative overflow-x-hidden">
+    <section id="image-section-home" class="lg:h-[130vh] h-[65vh] w-full py-24 text-center flex flex-col items-center relative overflow-x-hidden overflow-y-hidden">
         <p class="lg:block hidden absolute text-9xl font-serif uppercase text-stone-100 tracking-widest z-0">Made in Italy</p>
-        <h2 class="lg:w-6/12 w-full xl:text-5xl lg:text-4xl text-3xl font-serif uppercase lg:mt-24 mt-0 z-10"><?php the_field('titolo_sezione_home'); ?></h2>
+        <h2 class="lg:w-6/12 w-full 2xl:text-5xl lg:text-4xl text-2xl font-serif uppercase lg:mt-24 mt-0 z-10 px-4"><?php the_field('titolo_sezione_home'); ?></h2>
 
         <!-- immagini -->
         <?php
-        $images_section_home = get_field('immagini_sezione_home');
-        if ($images_section_home) : ?>
-            <ul>
-                <?php foreach ($images_section_home as $image_section_home) : ?>
-                    <li>
-                        <img src="<?php echo esc_url($image_section_home['sizes']['thumb_xlarge']); ?>" alt="<?php echo esc_attr($image_section_home['alt']); ?>" class="absolute" />
-                    </li>
-                <?php endforeach; ?>
-            </ul>
+        $img_home_sez1 = get_field('sezione1_home_img1');
+        if (!empty($img_home_sez1)) : ?>
+            <img src="<?php echo esc_url($img_home_sez1['url']); ?>" alt="<?php echo esc_attr($img_home_sez1['alt']); ?>" class="lg:block absolute h-full hidden 2xl:top-[15%] xl:top-[20%] xl:left-[2%] 2xl:max-h-[30rem] xl:max-h-[24rem] 2xl:max-w-[18rem] xl:max-w-[15rem] object-cover" />
+        <?php endif;
+        $img_home_sez2 = get_field('sezione2_home_img2');
+        if (!empty($img_home_sez2)) : ?>
+            <img src="<?php echo esc_url($img_home_sez2['url']); ?>" alt="<?php echo esc_attr($img_home_sez2['alt']); ?>" class="absolute w-full 2xl:top-[32%] xl:top-[35%] top-[43%] xl:left-auto left-[1rem] 2xl:max-h-[30rem] xl:max-h-[24rem] max-h-[12rem] 2xl:max-w-[48rem] xl:max-w-[42rem] max-w-[16rem] object-cover" />
+        <?php endif;
+        $img_home_sez3 = get_field('sezione3_home_img3');
+        if (!empty($img_home_sez3)) : ?>
+            <img src="<?php echo esc_url($img_home_sez3['url']); ?>" alt="<?php echo esc_attr($img_home_sez3['alt']); ?>" class="absolute 2xl:top-[27%] xl:top-[30%] top-[42%] xl:right-[5%] right-[1rem] 2xl:max-h-[16rem] xl:max-h-[12rem] max-h-[4rem] 2xl:max-w-[16rem] xl:max-w-[12rem] max-w-[4rem] object-cover" />
+        <?php endif;
+        $img_home_sez4 = get_field('sezione4_home_img4');
+        if (!empty($img_home_sez4)) : ?>
+            <img src="<?php echo esc_url($img_home_sez4['url']); ?>" alt="<?php echo esc_attr($img_home_sez4['alt']); ?>" class="lg:block w-full hidden absolute 2xl:top-[90%] xl:top-[80%] xl:left-[5%] 2xl:max-h-[16rem] xl:max-h-[12rem] 2xl:max-w-[26rem] xl:max-w-[20rem] object-cover" />
+        <?php endif;
+        $img_home_sez5 = get_field('sezione5_home_img5');
+        if (!empty($img_home_sez5)) : ?>
+            <img src="<?php echo esc_url($img_home_sez5['url']); ?>" alt="<?php echo esc_attr($img_home_sez5['alt']); ?>" class="h-full absolute 2xl:top-[67%] xl:top-[70%] top-[60%] xl:right-[0%] right-0 2xl:max-h-[34rem] xl:max-h-[28rem] max-h-[12rem] 2xl:max-w-[20rem] xl:max-w-[14rem] max-w-[5rem] object-cover" />
         <?php endif; ?>
         <!-- Sfondo -->
-        <img src="<?php echo get_template_directory_uri() . '/assets/img/sfondo.svg'; ?>" alt="" class="lg:block hidden absolute bottom-0 right-32 object-cover">
+        <img src="<?php echo get_template_directory_uri() . '/assets/img/sfondo.svg'; ?>" alt="" class="lg:block hidden absolute bottom-0 right-32 object-cover z-[-10]">
     </section>
 
     <!-- Sezione 2 -->
     <section class="relative w-full bg-neutral-900 lg:pt-16 pt-12">
-        
+
         <div class="2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md md:px-8 px-4 mx-auto lg:pt-24 pt-12 flex lg:flex-row flex-col justify-between text-white">
             <h3 class="lg:w-6/12 w-full  lg:text-4xl text-2xl font-serif uppercase"><?php the_field('titolo_sezione_2_home'); ?></h3>
             <span id="banner_line" class="absolute h-px w-64 bg-stone-400"></span>
@@ -109,44 +119,48 @@
         </div>
         <!-- Gallery -->
         <section class="lg:py-20 py-8 z-10">
-        <div class="splide relative">
-            <div class="splide__track z-20">
-            <?php
-                $rows_slide = get_field('slide_sezione_3_home');
-                if ($rows_slide) {
-                    echo '<ul class="splide__list">';
-                    foreach ($rows_slide as $row_slide) {
-                        $image_slide = $row_slide['immagine_slide_sezione_3_home'];
-                        $title_slide = $row_slide['titolo_prodotto_slide_sezione_3_home'];
-                        echo '<li class="splide__slide">';
-                        echo wp_get_attachment_image($image_slide, 'thumb_xlarge', "", ["class" => "object-cover","alt"=>"some"]);
-                        echo '<p class="py-8 text-left md:text-2xl text-xl font-serif">';
-                        echo $title_slide;
-                        echo '</p>';
-                        echo '</li>';
-                    }
-                    echo '</ul>';
-                }; ?>
+            <div id="slider-base" class="splide relative">
+                <div class="splide__track z-20">
+                    <?php
+                    $rows_slide = get_field('slide_sezione_3_home');
+                    if ($rows_slide) {
+                        echo '<ul class="splide__list">';
+                        foreach ($rows_slide as $row_slide) {
+                            $image_slide = $row_slide['immagine_slide_sezione_3_home'];
+                            $title_slide = $row_slide['titolo_prodotto_slide_sezione_3_home'];
+                            echo '<li class="splide__slide">';
+                            echo wp_get_attachment_image($image_slide, 'thumb_xlarge', "", ["class" => "object-cover", "alt" => "some"]);
+                            echo '<p class="py-8 text-left md:text-2xl text-xl font-serif">';
+                            echo $title_slide;
+                            echo '</p>';
+                            echo '</li>';
+                        }
+                        echo '</ul>';
+                    }; ?>
+                </div>
+                <!-- Add the progress bar element -->
+                <div class="my-slider-progress">
+                    <div class="my-slider-progress-bar"></div>
+                </div>
+                <!-- Custom Arrow -->
+                <div class="lg:block hidden splide__arrows">
+                    <button class="splide__arrow splide__arrow--prev z-40">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/img/arrowsx.svg'; ?>" class="h-12"></img>
+                    </button>
+                    <button class="splide__arrow splide__arrow--next z-40">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/img/arrowdx.svg'; ?>" class="h-12"></img>
+                    </button>
+                </div>
+                <span class="slider__line absolute w-px bg-brown-aran top-0 z-10"></span>
+                <span class="slider__line2 absolute w-px bg-brown-aran top-0 z-10"></span>
             </div>
-            <!-- Custom Arrow -->
-            <div class="splide__arrows">
-                <button class="splide__arrow splide__arrow--prev">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/img/arrowsx.svg'; ?>" class="h-12 z-40"></img>
-                </button>
-                <button class="splide__arrow splide__arrow--next">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/img/arrowdx.svg'; ?>" class="h-12 z-40"></img>
-                </button>
-            </div>
-            <span class="slider__line absolute w-px bg-brown-aran top-0 z-10"></span>
-            <span class="slider__line2 absolute w-px bg-brown-aran top-0 z-10"></span>
-        </div>
 
-    </section>
+        </section>
 
         <!-- Sfondo -->
         <img src="<?php echo get_template_directory_uri() . '/assets/img/sfondo2.svg'; ?>" alt="" class="lg:block hidden absolute bottom-0 object-cover z-0" style="left: -15%; z-index: -10;">
     </section>
-    
+
 </main>
 
 <?php get_footer(); ?>

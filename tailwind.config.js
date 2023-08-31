@@ -1,6 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
+    'template-parts/banner-offerte.php',
+    'template-parts/form-consulenza.php',
     'header.php',
     'footer.php',
     'home.php',
@@ -14,7 +16,9 @@ module.exports = {
     'page-catalogo.php',
     'page-consulenza.php',
     'page-contatti.php',
+    'page-thanks.php',
     'single.php',
+    '404.php'
   ],
   theme: {
       fontFamily: {
@@ -29,7 +33,7 @@ module.exports = {
       },
       spacing: {
         'custom': '48%',
-        'custom-30': '48%',
+        'custom-32': '32%',
       },
       aspectRatio: {
         '3/1': '3 / 1',

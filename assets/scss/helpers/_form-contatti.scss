@@ -1,0 +1,38 @@
+input {
+  text-align: center;
+  ::placeholder {
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+input[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 3rem 0;
+  padding: 1rem 2rem;
+  border: 1px solid #1d1d1b;
+  transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+@media (min-width:1024px) {
+    input[type="submit"]:hover {
+      background-color: #1d1d1b;
+      color: white;
+    }
+}
+textarea {
+  text-align: center;
+  ::placeholder {
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}

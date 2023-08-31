@@ -65,7 +65,7 @@
 
         <!-- Mappa -->
         <div class="lg:w-6/12 w-full lg:h-auto h-96">
-            <iframe src="https://snazzymaps.com/embed/519026" width="100%" height="100%" style="border:none;"></iframe>
+            <iframe src="<?php echo get_template_directory_uri() . '/map.html' ?>" width="100%" height="100%" style="border:none;"></iframe>
         </div>
     </section>
 

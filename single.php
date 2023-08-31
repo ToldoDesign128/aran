@@ -8,9 +8,9 @@
         </div>
         <div class="lg:w-3/12 w-full flex flex-col justify-center" style="margin-left: 8.33333%;">
             <h2 class="text-3xl font-serif uppercase mb-12"><?php echo get_the_title(); ?></h2>
-            <p>Composizioni disponibili</p>
+            <p><?php echo esc_html(get_field('sottotitolo_1')); ?></p>
             <p class="text-xl font-serif mt-4 mb-8"><?php echo esc_html(get_field('composizioni_disponibili')); ?></p>
-            <p><?php echo esc_html(get_field('sottotitolo')); ?></p>
+            <p><?php echo esc_html(get_field('sottotitolo_2')); ?></p>
             <p class="text-xl font-serif mt-4 mb-8"><?php echo esc_html(get_field('sottotitolo_testo')); ?></p>
         </div>
     </section>
@@ -40,7 +40,7 @@
         </div>
     </section>
     <section class="py-20">
-        <div class="splide relative">
+        <div id="slider-base" class="splide relative">
             <div class="splide__track">
                 <?php
                 $images_single = get_field('slider_single');
@@ -54,6 +54,10 @@
                         <?php endforeach; ?>
                     </ul>
                 <?php endif; ?>
+            </div>
+            <!-- Add the progress bar element -->
+            <div class="my-slider-progress">
+                <div class="my-slider-progress-bar"></div>
             </div>
             <!-- Custom Arrow -->
             <div class="splide__arrows">
