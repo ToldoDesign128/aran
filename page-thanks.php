@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main>
-    <section class="h-screen flex flex-col items-center w-full">
+    <section class="h-screen w-full flex flex-col items-center justify-center">
         <div class="my-12">
             <h1><?php the_field('titolo_pagina_ringraziamenti'); ?></h1>
         </div>
