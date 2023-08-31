@@ -10,8 +10,9 @@ mix.sass('assets/scss/style.scss', 'style.css')
 mix.sass('assets/scss/hamburgers.scss', 'hamburgers.css')
   .minify('hamburgers.css');
 
-// mix.combine(['assets/js/main.js', ''], 'script.js')
-mix.minify(['assets/js/main.js'], 'script.min.js');
+mix.combine(['assets/js/main.js', 'assets/js/form-consulenza.js'], 'script.js')
+
+mix.minify(['script.js'], 'script.min.js');
 
 mix.webpackConfig({
   watchOptions: {

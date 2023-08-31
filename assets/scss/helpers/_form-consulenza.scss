@@ -1,0 +1,12 @@
+#FormConsulenza {
+  input {
+    padding: 1rem 2rem;
+    border-bottom: 1px solid black;
+  }
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus {
+    outline: none;
+  }
+}

@@ -30,4 +30,9 @@ textarea {
     font-weight: 400;
   }
 }
-
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}

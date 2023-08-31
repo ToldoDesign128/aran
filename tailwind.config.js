@@ -2,6 +2,7 @@
 module.exports = {
   content: [
     'template-parts/banner-offerte.php',
+    'template-parts/form-consulenza.php',
     'header.php',
     'footer.php',
     'home.php',
