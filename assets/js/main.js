@@ -1,5 +1,3 @@
-//main.js
-
 //Hamburger menu
 jQuery(".hamburger").click(function () {
   jQuery(".hamburger").toggleClass("is-active");
@@ -17,9 +15,12 @@ jQuery('.accordion__icon').click(function () {
   jQuery('.accordion__risposta').not(risposta).removeClass('open-panel');
 });
 
-//Splide
-var sliderUno = new Splide('#slider-base', {
-  type: 'loop',
+
+var elms = document.getElementsByClassName( '#slider-base' );
+
+for ( var i = 0; i < elms.length; i++ ) {
+  new Splide( elms[ i ] ,{
+    type: 'loop',
   padding: '5rem',
   focus: 'center',
   trimSpace: false,
@@ -27,7 +28,8 @@ var sliderUno = new Splide('#slider-base', {
   breakpoints: {
     1024: { padding: '1.2rem', gap: 10 },
   },
-});
+  } ).mount();
+}
 
 var bar = sliderUno.root.querySelector('.my-slider-progress-bar');
 
@@ -37,5 +39,3 @@ sliderUno.on('mounted move', function () {
   var rate = Math.min((sliderUno.index + 1) / end, 1);
   bar.style.width = String(100 * rate) + '%';
 });
-
-sliderUno.mount();

@@ -12,8 +12,6 @@ mix.sass('assets/scss/hamburgers.scss', 'hamburgers.css')
 
 mix.combine(['assets/js/main.js', 'assets/js/form-consulenza.js'], 'script.js')
 
-mix.minify(['script.js'], 'script.min.js');
-
 mix.webpackConfig({
   watchOptions: {
     ignored: /node_modules/

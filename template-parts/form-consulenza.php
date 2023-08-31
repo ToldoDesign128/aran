@@ -42,31 +42,49 @@
 
             <!-- Secondo step -->
             <div class="tab-form lg:max-w-[60%] max-w-none flex flex-col justify-between mx-auto lg:my-8 my-16">
-                <!-- Ambiente -->
+                <!-- Data -->
+                <div id="calendar"></div>
+                <!-- Orari -->
                 <div class="w-full my-4">
                     <select class="w-full text-center" name="environments" id="environments">
-                        <option value="ambiente 1">Ambiente 1</option>
-                        <option value="ambiente 2">Ambiente 2</option>
-                        <option value="ambiente 3">Ambiente 3</option>
-                        <option value="ambiente 4">Ambiente 4</option>
-                        <option value="ambiente 5">Ambiente 5</option>
-                        <option value="ambiente 6">Ambiente 6</option>
+                        <option value="orari 1">orari 1</option>
+                        <option value="orari 2">orari 2</option>
+                        <option value="orari 3">orari 3</option>
+                        <option value="orari 4">orari 4</option>
+                        <option value="orari 5">orari 5</option>
+                        <option value="orari 6">orari 6</option>
                     </select>
                 </div>
-                <!-- Data -->
-                <input class="w-full my-4" type="date">
-                <!-- Nome -->
-                <input class="w-full my-4" name="fullname" placeholder=" Nome e Cognome " type="text">
-                <!-- Telefono -->
-                <input class="w-full my-4" name="phone" placeholder=" Telefono " type="text">
-                <!-- Email -->
-                <input class="w-full my-4" name="email" placeholder=" Email " type="email">
-
                 <!-- Shop id -->
                 <input type="hidden">
 
-                <input type="submit">
+                <button type="submit"></button>
 
-            </div>
+                <!-- Terzo step -->
+                <div class="tab-form lg:max-w-[60%] max-w-none flex flex-col justify-between mx-auto lg:my-8 my-16">
+                    <!-- Ambiente -->
+                    <div class="w-full my-4">
+                        <select class="w-full text-center" name="environments" id="environments">
+                            <option value="ambiente 1">Ambiente 1</option>
+                            <option value="ambiente 2">Ambiente 2</option>
+                            <option value="ambiente 3">Ambiente 3</option>
+                            <option value="ambiente 4">Ambiente 4</option>
+                            <option value="ambiente 5">Ambiente 5</option>
+                            <option value="ambiente 6">Ambiente 6</option>
+                        </select>
+                    </div>
+                    <!-- Nome -->
+                    <input class="w-full my-4" name="fullname" placeholder=" Nome e Cognome " type="text">
+                    <!-- Telefono -->
+                    <input class="w-full my-4" name="phone" placeholder=" Telefono " type="text">
+                    <!-- Email -->
+                    <input class="w-full my-4" name="email" placeholder=" Email " type="email">
+
+                    <!-- Shop id -->
+                    <input type="hidden">
+
+                    <button type="submit"></button>
+
+                </div>
         </form>
     </section>

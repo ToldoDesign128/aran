@@ -40,12 +40,15 @@ function add_aran_scripts()
 {
     wp_enqueue_style('hamburger-style', get_template_directory_uri() . '/hamburgers.min.css');
     wp_enqueue_style('splide-style', get_template_directory_uri() . '/splide.min.css');
-    wp_enqueue_style('aran-style', get_template_directory_uri() . '/style.min.css');
+    wp_enqueue_style('calendar-style','https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar/build/vanilla-calendar.min.css');
+    wp_enqueue_style('calendar-light-style','https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar/build/themes/light.min.css');
+    wp_enqueue_style('calendar-light-style','https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar/build/themes/dark.min.css');
+
+    wp_enqueue_style('aran-min-style', get_template_directory_uri() . '/style.min.css');
     wp_enqueue_style('aran-style', get_template_directory_uri() . '/style.css');
-
-
-    wp_enqueue_script("splide-script", get_template_directory_uri() . '/assets/js/splide.min.js', array("jquery"), null, true);
-    wp_enqueue_script("aran-script", get_template_directory_uri() . '/script.min.js', array("jquery"), null, true);
+  
+    wp_enqueue_script("splide-script", get_template_directory_uri() . '/assets/js/splide/splide.min.js');
+    wp_enqueue_script("aran-script", get_template_directory_uri() . '/script.js', array("jquery"), null, true);
 }
 add_action('wp_enqueue_scripts', 'add_aran_scripts');
 

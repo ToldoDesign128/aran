@@ -8,6 +8,7 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="theme-color" content="#417BC7">
     <meta name="description" content="<?php bloginfo('description'); ?>">
+    <script src="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar/build/vanilla-calendar.min.js"></script>
     <!-- Google Tag Manager -->
     <script>
         (function(w, d, s, l, i) {
@@ -126,7 +127,7 @@
                     'orderby'           => 'menu_order'
                 )); ?>
             </nav>
-            <div class="w-full md:max-w-screen-md sm:max-w-screen-sm max-w-sm md:mx-auto md:px-8 px-1 pt-12 w-full flex flex-col items-center">
+            <div class="w-full md:max-w-screen-md sm:max-w-screen-sm max-w-sm md:mx-auto md:px-8 px-1 pt-12 flex flex-col items-center">
 
                 <!-- Catalogo  -->
                 <?php
