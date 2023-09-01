@@ -40,7 +40,15 @@ function add_aran_scripts()
 {
     wp_enqueue_style('hamburger-style', get_template_directory_uri() . '/hamburgers.min.css');
     wp_enqueue_style('splide-style', get_template_directory_uri() . '/splide.min.css');
+    wp_enqueue_style('multiselect-style', "https://unpkg.com/multiple-select@1.6.0/dist/multiple-select.min.css");
     wp_enqueue_style('aran-style', get_template_directory_uri() . '/style.css');
+
+
+    // JQuery Validate
+    wp_enqueue_script("validate-script", "https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js", array("jquery"), null, false);
+
+    // Multiple select
+    wp_enqueue_script("multiselect-script", "https://unpkg.com/multiple-select@1.6.0/dist/multiple-select.min.js", array("jquery"), null, false);
 
 
     wp_enqueue_script("splide-script", get_template_directory_uri() . '/assets/js/splide.min.js', array("jquery"), null, true);

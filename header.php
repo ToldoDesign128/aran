@@ -16,9 +16,7 @@
         <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar/build/themes/dark.min.css" rel="stylesheet">
         <!-- Plugin JS -->
         <script src="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar/build/vanilla-calendar.min.js"></script>
-        <!-- JQuery Validate -->
-        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
-    <?php };?>
+    <?php }; ?>
 
     <!-- Google Tag Manager -->
     <script>

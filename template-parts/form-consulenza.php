@@ -42,10 +42,10 @@
             <!-- Secondo step -->
             <div class="tab-form lg:max-w-[60%] max-w-none flex flex-col justify-between mx-auto lg:my-8 my-16">
                 <!-- Data -->
-                <div class="m-auto my-4" id="calendar"></div>
+                <div class="m-auto my-4" id="calendar" required></div>
 
                 <div class="w-full my-4">
-                    <select class="w-full text-center" name="environments" id="environments">
+                    <select class="w-full text-center" name="orari" id="orari">
                         <option value="orario 1">orario 1</option>
                         <option value="orario 2">orario 2</option>
                         <option value="orario 3">orario 3</option>
@@ -62,7 +62,7 @@
             <div class="tab-form lg:max-w-[60%] max-w-none flex flex-col justify-between mx-auto lg:my-8 my-16">
                 <!-- Ambiente -->
                 <div class="w-full my-4">
-                    <select class="w-full text-center" name="environments" id="environments">
+                    <select class="w-full text-center" name="environments" id="environments" multiple="multiple">
                         <option value="ambiente 1">Ambiente 1</option>
                         <option value="ambiente 2">Ambiente 2</option>
                         <option value="ambiente 3">Ambiente 3</option>
@@ -72,11 +72,11 @@
                     </select>
                 </div>
                 <!-- Nome -->
-                <input class="w-full my-4" name="fullname" placeholder=" Nome e Cognome " type="text">
+                <input class="w-full my-4" name="fullname" placeholder=" Nome e Cognome " type="text" required>
                 <!-- Email -->
-                <input class="w-full my-4" name="email" placeholder=" Email " type="email">
+                <input class="w-full my-4" name="email" placeholder=" Email " type="email" required>
                 <!-- Telefono -->
-                <input class="w-full my-4" name="phone" placeholder=" Telefono " type="text">
+                <input class="w-full my-4" name="phone" placeholder=" Telefono " type="text" required>
                 <!-- Textarea -->
                 <textarea name="note" class="w-full my-4 border-b border-black " rows="5" placeholder="Note"></textarea>
 
@@ -89,6 +89,9 @@
         </form>
     </section>
     <script>
+        jQuery("#FormConsulenza").validate();
+        jQuery('select').multipleSelect();
+
         let dateTomorrow = new Date();
 
         function getNextDate(date) {
