@@ -62,7 +62,7 @@
         <h3 class="xl:text-5xl lg:text-4xl text-3xl font-serif uppercase lg:mb-12 mb-8 text-center">Compila il form</h3>
         <div class="lg:w-6/12 w-full">
         <?php
-        gravity_form( 1, false, false, false, '', false );
+        gravity_form( 5, false, false, false, '', false );
         ?>
         </div>
     </section>

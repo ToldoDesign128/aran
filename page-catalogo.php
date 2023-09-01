@@ -68,14 +68,14 @@
             <!-- form catalogo online -->
             <div id="catalogoOnline" class="hidden lg:w-6/12 w-full m-auto">
                 <?php
-                gravity_form(2, false, false, false, '', false);
+                gravity_form(6, false, false, false, '', false);
                 ?>
             </div>
 
             <!-- form catalogo casa -->
             <div id="catalogoCasa" class="hidden lg:w-6/12 w-full m-auto">
                 <?php
-                gravity_form(3, false, false, false, '', false);
+                gravity_form(7, false, false, false, '', false);
                 ?>
             </div>
 
