@@ -22,7 +22,7 @@
          'description'   => 'Una sezione per gestire i prodotti di arredamento che poi vengono stampati nella rispettiva pagina',
          'public'        => true,
          'menu_icon'     => 'dashicons-plus-alt',
-         'supports'      => array('title', 'thumbnail', 'editor')
+         'supports'      => array('title', 'thumbnail')
      );
      register_post_type( 'arredamento', $args );
     

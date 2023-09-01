@@ -13,6 +13,7 @@
         <!-- Plugin CSS -->
         <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar/build/vanilla-calendar.min.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar/build/themes/light.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar/build/themes/dark.min.css" rel="stylesheet">
         <!-- Plugin JS -->
         <script src="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar/build/vanilla-calendar.min.js"></script>
         <!-- JQuery Validate -->
@@ -107,18 +108,18 @@
                     <img src="<?php echo get_template_directory_uri() . '/assets/img/logo.svg'; ?>" class="h-12"></img>
                 </a>
 
-                <button class="lg:hidden w-auto hamburger hamburger--collapse" type="button" aria-label="Menu" aria-controls="navigation">
+                <button class="lg:hidden w-auto hamburger hamburger--collapse " type="button" aria-label="Menu" aria-controls="navigation">
                     <span class="hamburger-box">
                         <span class="hamburger-inner"></span>
                     </span>
                 </button>
 
-                <div class="lg:w-8/12 w-full lg:flex hidden">
+                <div class="lg:w-auto w-full lg:flex hidden">
                     <nav class="w-full flex">
                         <?php wp_nav_menu(array(
                             'theme_location'    => 'header',
                             'container'         =>  false,
-                            'menu_class'        => 'flex justify-between uppercase text-lg tracking-wider items-center w-full',
+                            'menu_class'        => 'flex xl:gap-6 lg:gap-5 gap-4 justify-between uppercase text-lg tracking-wider items-center w-full',
                             'orderby'           => 'menu_order'
                         )); ?>
                     </nav>

@@ -40,10 +40,9 @@
 
     <!-- cta -->
     <section class="2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md md:px-8 px-4 mx-auto lg:py-24 py-12 flex flex-col items-center">
-        <h5 class="xl:text-5xl lg:text-4xl text-3xl font-serif uppercase lg:mt-24 mt-12 text-center">RICHIEDI <br> IL CATALOGO 2023</h5>
+        <h5 class="xl:text-5xl lg:text-4xl text-3xl font-serif uppercase my-12 text-center">RICHIEDI <br> IL CATALOGO 2023</h5>
         <form class="w-full flex lg:flex-row flex-col justify-between lg:my-8 my-16">
-            <div class="relative lg:w-custom w-full flex flex-col justify-between py-8 px-6 border border-dark-aran text-center items-center">
-                <span class="absolute bg-stone-200 py-1 px-2" style="top: -14px;">Per te 10% di sconto</span>
+            <button id="buttonCatalogoCasa" type="button" class="lg:w-custom w-full flex flex-col justify-between py-8 px-6 border border-dark-aran text-center items-center">
                 <img src="<?php echo get_template_directory_uri() . '/assets/img/catalogo3.svg'; ?>" alt="" class="w-10 m-auto my-6">
                 <?php
                 $card_1_catalogo = get_field('card_1_catalogo');
@@ -51,10 +50,11 @@
                     <p class="font-serif text-xl my-3"><?php echo esc_html($card_1_catalogo['titolo_card_1_catalogo']); ?></p>
                     <p><?php echo esc_html($card_1_catalogo['testo_card_1_catalogo']); ?></p>
                 <?php endif; ?>
-    
+
                 <img src="<?php echo get_template_directory_uri() . '/assets/img/catalogo_arrow.svg'; ?>" alt="" class="w-6 m-auto my-6">
-            </div>
-            <div class="lg:w-custom w-full lg:mt-0 mt-4 py-8 px-12 flex flex-col justify-between border border-dark-aran text-center items-center">
+            </button>
+
+            <button id="buttonCatalogoOnline" type="button" class="lg:w-custom w-full lg:mt-0 mt-4 py-8 px-12 flex flex-col justify-between border border-dark-aran text-center items-center">
                 <img src="<?php echo get_template_directory_uri() . '/assets/img/catalogo4.svg'; ?>" alt="" class="w-10 m-auto my-6">
                 <?php
                 $card_2_catalogo = get_field('card_2_catalogo');
@@ -63,7 +63,22 @@
                     <p><?php echo esc_html($card_2_catalogo['testo_card_2_catalogo']); ?></p>
                 <?php endif; ?>
                 <img src="<?php echo get_template_directory_uri() . '/assets/img/catalogo_arrow.svg'; ?>" alt="" class="w-6 m-auto my-6">
+            </button>
+
+            <!-- form catalogo online -->
+            <div id="catalogoOnline" class="hidden lg:w-6/12 w-full m-auto">
+                <?php
+                gravity_form(2, false, false, false, '', false);
+                ?>
             </div>
+
+            <!-- form catalogo casa -->
+            <div id="catalogoCasa" class="hidden lg:w-6/12 w-full m-auto">
+                <?php
+                gravity_form(3, false, false, false, '', false);
+                ?>
+            </div>
+
         </form>
     </section>
 

@@ -6,8 +6,7 @@
 
             <!-- Primo step -->
             <div class="tab-form flex lg:flex-row flex-col justify-between lg:my-8 my-16">
-                <button class="nextBtn lg:w-custom-32 w-full relative flex flex-col justify-between py-8 px-6 border border-dark-aran text-center items-center" onclick="nextPrev(1)">
-                    <span class="absolute bg-stone-200 py-1 px-2" style="top: -14px;">Per te 10% di sconto</span>
+                <button class="nextBtn lg:w-custom-32 w-full flex flex-col justify-between py-8 px-6 border border-dark-aran text-center items-center" onclick="nextPrev(1)">
                     <img src="<?php echo get_template_directory_uri() . '/assets/img/consulenza/store.svg'; ?>" alt="" class="w-10 m-auto my-6">
                     <?php
                     $card_1_consulenza = get_field('card_1_consulenza');

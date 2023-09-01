@@ -612,6 +612,9 @@ video {
 .mt-8{
   margin-top: 2rem;
 }
+.ml-\[8\.3\%\]{
+  margin-left: 8.3%;
+}
 .inline{
   display: inline;
 }
@@ -626,6 +629,9 @@ video {
 }
 .aspect-video{
   aspect-ratio: 16 / 9;
+}
+.aspect-square{
+  aspect-ratio: 1 / 1;
 }
 .h-0{
   height: 0px;
@@ -681,6 +687,9 @@ video {
 .max-h-\[4rem\]{
   max-height: 4rem;
 }
+.max-h-\[32rem\]{
+  max-height: 32rem;
+}
 .w-0{
   width: 0px;
 }
@@ -729,6 +738,9 @@ video {
 .w-px{
   width: 1px;
 }
+.w-\[48\2c 5\%\]{
+  width: 48,5%;
+}
 .max-w-\[16rem\]{
   max-width: 16rem;
 }
@@ -755,6 +767,9 @@ video {
 }
 .grid-cols-1{
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .flex-row{
   flex-direction: row;
@@ -798,8 +813,9 @@ video {
 .border-b{
   border-bottom-width: 1px;
 }
-.border-b-2{
-  border-bottom-width: 2px;
+.border-black{
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 .border-dark-aran{
   --tw-border-opacity: 1;
@@ -812,18 +828,6 @@ video {
 .border-white{
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-.border-black{
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
-}
-.border-b-dark-aran{
-  --tw-border-opacity: 1;
-  border-bottom-color: rgb(29 29 27 / var(--tw-border-opacity));
-}
-.border-b-black{
-  --tw-border-opacity: 1;
-  border-bottom-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 .bg-brown-aran{
   --tw-bg-opacity: 1;
@@ -1394,6 +1398,14 @@ button:focus {
     margin-top: auto;
     margin-bottom: auto;
   }
+  .lg\:my-0{
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .lg\:my-20{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
   .lg\:mb-12{
     margin-bottom: 3rem;
   }
@@ -1408,6 +1420,12 @@ button:focus {
   }
   .lg\:mt-24{
     margin-top: 6rem;
+  }
+  .lg\:ml-\[8\.3\%\]{
+    margin-left: 8.3%;
+  }
+  .lg\:mt-8{
+    margin-top: 2rem;
   }
   .lg\:block{
     display: block;
@@ -1429,6 +1447,9 @@ button:focus {
   }
   .lg\:h-screen{
     height: 100vh;
+  }
+  .lg\:h-\[90vh\]{
+    height: 90vh;
   }
   .lg\:max-h-\[400px\]{
     max-height: 400px;
@@ -1464,6 +1485,15 @@ button:focus {
     width: -moz-max-content;
     width: max-content;
   }
+  .lg\:w-auto{
+    width: auto;
+  }
+  .lg\:w-2\/12{
+    width: 16.666667%;
+  }
+  .lg\:w-9\/12{
+    width: 75%;
+  }
   .lg\:max-w-\[60\%\]{
     max-width: 60%;
   }
@@ -1478,6 +1508,12 @@ button:focus {
   }
   .lg\:gap-0{
     gap: 0px;
+  }
+  .lg\:gap-5{
+    gap: 1.25rem;
+  }
+  .lg\:gap-8{
+    gap: 2rem;
   }
   .lg\:py-0{
     padding-top: 0px;
@@ -1572,6 +1608,9 @@ button:focus {
     width: -moz-max-content;
     width: max-content;
   }
+  .xl\:w-5\/12{
+    width: 41.666667%;
+  }
   .xl\:max-w-\[12rem\]{
     max-width: 12rem;
   }
@@ -1589,6 +1628,9 @@ button:focus {
   }
   .xl\:max-w-screen-xl{
     max-width: 1280px;
+  }
+  .xl\:gap-6{
+    gap: 1.5rem;
   }
   .xl\:px-16{
     padding-left: 4rem;

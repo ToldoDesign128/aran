@@ -154,7 +154,6 @@
                 <span class="slider__line absolute w-px h-[472px] bg-brown-aran top-0 z-10"></span>
                 <span class="slider__line2 absolute w-px h-[472px] bg-brown-aran top-0 z-10"></span>
             </div>
-
         </section>
 
         <!-- Sfondo -->

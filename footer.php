@@ -75,11 +75,11 @@
             <a href="<?php echo get_home_url(); ?>" class="flex items-center lg:py-0 py-4">
                 <img src="<?php echo get_template_directory_uri() . '/assets/img/logo.svg'; ?>" class="m-auto h-12"></img>
             </a>
-            <nav class="w-8/12 flex">
+            <nav class="w-auto flex">
                 <?php wp_nav_menu(array(
                     'theme_location'    => 'header',
                     'container'         =>  false,
-                    'menu_class'        => 'flex lg:flex-row flex-col justify-between uppercase text-lg tracking-wider items-center w-full',
+                    'menu_class'        => 'flex gap-4 lg:flex-row flex-col justify-between uppercase text-lg tracking-wider items-center w-full',
                     'orderby'           => 'menu_order'
                 )); ?>
             </nav>
