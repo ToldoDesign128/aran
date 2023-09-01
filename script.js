@@ -17,27 +17,6 @@ jQuery('.accordion__icon').click(function () {
   jQuery('.accordion__risposta').not(risposta).removeClass('open-panel');
 });
 
-// Catalogo Action
-
-document.getElementById("buttonCatalogoCasa").addEventListener("click", function() {
-  // Aggiunge la classe "block" al div con id "catalogoCasa"
-  document.getElementById("catalogoCasa").classList.remove("hidden");
-
-  // Nasconde i pulsanti
-  document.getElementById("buttonCatalogoCasa").classList.add("hidden");
-  document.getElementById("buttonCatalogoOnline").classList.add("hidden");
-});
-
-document.getElementById("buttonCatalogoOnline").addEventListener("click", function() {
-  // Aggiunge la classe "block" al div con id "catalogoOnline"
-  document.getElementById("catalogoOnline").classList.remove("hidden");
-
-  // Nasconde i pulsanti
-  document.getElementById("buttonCatalogoCasa").classList.add("hidden");
-  document.getElementById("buttonCatalogoOnline").classList.add("hidden");
-});
-
-
 //Splide
 var sliderUno = new Splide('#slider-base', {
   type: 'loop',
@@ -60,3 +39,23 @@ sliderUno.on('mounted move', function () {
 });
 
 sliderUno.mount();
+
+// Catalogo Action
+
+document.getElementById("buttonCatalogoCasa").addEventListener("click", function() {
+  // Aggiunge la classe "block" al div con id "catalogoCasa"
+  document.getElementById("catalogoCasa").classList.remove("hidden");
+
+  // Nasconde i pulsanti
+  document.getElementById("buttonCatalogoCasa").classList.add("hidden");
+  document.getElementById("buttonCatalogoOnline").classList.add("hidden");
+});
+
+document.getElementById("buttonCatalogoOnline").addEventListener("click", function() {
+  // Aggiunge la classe "block" al div con id "catalogoOnline"
+  document.getElementById("catalogoOnline").classList.remove("hidden");
+
+  // Nasconde i pulsanti
+  document.getElementById("buttonCatalogoCasa").classList.add("hidden");
+  document.getElementById("buttonCatalogoOnline").classList.add("hidden");
+});
