@@ -67,13 +67,25 @@
 
             <!-- form catalogo online -->
             <div id="catalogoOnline" class="hidden lg:w-6/12 w-full m-auto">
+                <div class="lg:w-6/12 w-full m-auto my-4">
+                    <button type="button" class="backButton w-full uppercase font-sm tracking-wider text-center border border-dark-aran py-4 px-8 lg:hover:bg-dark-aran lg:hover:border-white lg:hover:text-white transition-all">
+                        Torna al passaggio precedente
+                    </button>
+
+                </div>
                 <?php
-                gravity_form(6, false, false, false, '', false);
+                gravity_form(3, false, false, false, '', false);
                 ?>
             </div>
 
             <!-- form catalogo casa -->
             <div id="catalogoCasa" class="hidden lg:w-6/12 w-full m-auto">
+                <div class="lg:w-6/12 w-full m-auto my-4">
+                    <button type="button" class="backButton w-full uppercase font-sm tracking-wider text-center border border-dark-aran py-4 px-8 lg:hover:bg-dark-aran lg:hover:border-white lg:hover:text-white transition-all">
+                        Torna al passaggio precedente
+                    </button>
+
+                </div>
                 <?php
                 gravity_form(7, false, false, false, '', false);
                 ?>
@@ -85,7 +97,6 @@
 </main>
 <script>
     // Catalogo Action
-
     document.getElementById("buttonCatalogoCasa").addEventListener("click", function() {
         // Aggiunge la classe "block" al div con id "catalogoCasa"
         document.getElementById("catalogoCasa").classList.remove("hidden");
@@ -103,5 +114,18 @@
         document.getElementById("buttonCatalogoCasa").classList.add("hidden");
         document.getElementById("buttonCatalogoOnline").classList.add("hidden");
     });
+
+    // Bottone
+    document.getElementsByClassName("backButton").addEventListener("click", function() {
+        // Aggiunge la classe "hidden" al div con id "catalogoOnline"
+        document.getElementById("catalogoCasa").classList.add("hidden");
+        document.getElementById("catalogoOnline").classList.add("hidden");
+
+        // Mostra i pulsanti
+        document.getElementById("buttonCatalogoCasa").classList.remove("hidden");
+        document.getElementById("buttonCatalogoOnline").classList.remove("hidden");
+    });
+
+
 </script>
 <?php get_footer(); ?>
