@@ -74,7 +74,7 @@
 
                 </div>
                 <?php
-                gravity_form(3, false, false, false, '', false);
+                gravity_form(6, false, false, false, '', false);
                 ?>
             </div>
 
@@ -115,16 +115,35 @@
         document.getElementById("buttonCatalogoOnline").classList.add("hidden");
     });
 
-    // Bottone
-    document.getElementsByClassName("backButton").addEventListener("click", function() {
-        // Aggiunge la classe "hidden" al div con id "catalogoOnline"
-        document.getElementById("catalogoCasa").classList.add("hidden");
-        document.getElementById("catalogoOnline").classList.add("hidden");
+    // Bottone indietro
+    document.addEventListener('DOMContentLoaded', function() {
+    var backButton = document.getElementsByClassName('backButton');
+    for (var i = 0; i < backButton.length; i++) {
+        backButton[i].addEventListener('click', function() {
+            var catalogoOnline = document.getElementById('catalogoOnline');
+            var catalogoCasa = document.getElementById('catalogoCasa');
+            var buttonCatalogoCasa = document.getElementById('buttonCatalogoCasa');
+            var buttonCatalogoOnline = document.getElementById('buttonCatalogoOnline');
 
-        // Mostra i pulsanti
-        document.getElementById("buttonCatalogoCasa").classList.remove("hidden");
-        document.getElementById("buttonCatalogoOnline").classList.remove("hidden");
-    });
+            if (!catalogoOnline.classList.contains('hidden')) {
+                catalogoOnline.classList.add('hidden');
+            }
+
+            if (!catalogoCasa.classList.contains('hidden')) {
+                catalogoCasa.classList.add('hidden');
+            }
+
+            if (buttonCatalogoCasa.classList.contains('hidden')) {
+                buttonCatalogoCasa.classList.remove('hidden');
+            }
+
+            if (buttonCatalogoOnline.classList.contains('hidden')) {
+                buttonCatalogoOnline.classList.remove('hidden');
+            }
+        });
+    }
+});
+
 
 
 </script>
