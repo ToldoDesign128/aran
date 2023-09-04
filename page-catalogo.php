@@ -66,8 +66,8 @@
             </button>
 
             <!-- form catalogo online -->
-            <div id="catalogoOnline" class="hidden lg:w-6/12 w-full m-auto">
-                <div class="lg:w-6/12 w-full m-auto my-4">
+            <div id="catalogoOnline" class="hidden w-full m-auto">
+                <div class="w-full m-auto my-8">
                     <button type="button" class="backButton w-full uppercase font-sm tracking-wider text-center border border-dark-aran py-4 px-8 lg:hover:bg-dark-aran lg:hover:border-white lg:hover:text-white transition-all">
                         Torna al passaggio precedente
                     </button>
@@ -79,8 +79,8 @@
             </div>
 
             <!-- form catalogo casa -->
-            <div id="catalogoCasa" class="hidden lg:w-6/12 w-full m-auto">
-                <div class="lg:w-6/12 w-full m-auto my-4">
+            <div id="catalogoCasa" class="hidden w-full m-auto">
+                <div class="w-full m-auto my-8">
                     <button type="button" class="backButton w-full uppercase font-sm tracking-wider text-center border border-dark-aran py-4 px-8 lg:hover:bg-dark-aran lg:hover:border-white lg:hover:text-white transition-all">
                         Torna al passaggio precedente
                     </button>

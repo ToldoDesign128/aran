@@ -687,6 +687,9 @@ video {
 .max-h-\[4rem\]{
   max-height: 4rem;
 }
+.min-h-full{
+  min-height: 100%;
+}
 .w-0{
   width: 0px;
 }
@@ -1309,11 +1312,50 @@ button:focus {
 #FormConsulenza button:focus {
   outline: none;
 }
-#FormConsulenza .vanilla-calendar-month, #FormConsulenza .vanilla-calendar-year {
+#FormConsulenza .vanilla-calendar {
+  background-color: white;
+}
+#FormConsulenza .vanilla-calendar .vanilla-calendar-header__content {
+  color: black;
+}
+#FormConsulenza .vanilla-calendar .vanilla-calendar-month,
+#FormConsulenza .vanilla-calendar .vanilla-calendar-year {
+  color: black;
   font-family: "Bodoni Moda", serif;
 }
+#FormConsulenza .vanilla-calendar .vanilla-calendar-week {
+  color: black;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+#FormConsulenza .vanilla-calendar .vanilla-calendar-week__day {
+  color: black;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+#FormConsulenza .vanilla-calendar .vanilla-calendar-day__btn {
+  border-radius: 0;
+}
+#FormConsulenza .vanilla-calendar .vanilla-calendar-day__btn_selected {
+  background-color: #DEDEDE;
+}
+#FormConsulenza .ms-choice {
+  text-align: center;
+  border-radius: 0;
+  border: 1px solid black;
+  padding: 2rem 0;
+}
+#FormConsulenza .ms-choice span {
+  padding: 1rem 0;
+}
+#FormConsulenza .ms-drop {
+  box-shadow: none;
+  border-radius: 0;
+  border: 1px solid black;
+}
+#FormConsulenza .ms-drop .ms-select-all {
+  display: none !important;
+}
 
-.fieldset {
+#catalogoOnline .fieldset, #catalogoCasa .fieldset {
   border-bottom: 1px solid black;
   padding: 1rem 0;
 }
@@ -1455,6 +1497,9 @@ button:focus {
   .lg\:w-8\/12{
     width: 66.666667%;
   }
+  .lg\:w-\[48\.5\%\]{
+    width: 48.5%;
+  }
   .lg\:w-auto{
     width: auto;
   }
@@ -1533,9 +1578,6 @@ button:focus {
   .lg\:text-4xl{
     font-size: 2.25rem;
     line-height: 2.5rem;
-  }
-  .lg\:hover\:border-none:hover{
-    border-style: none;
   }
   .lg\:hover\:border-white:hover{
     --tw-border-opacity: 1;

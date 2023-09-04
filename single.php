@@ -31,11 +31,11 @@
             <?php
             $image2 = get_field('immagine_2_single');
             if (!empty($image2)) : ?>
-                <img src="<?php echo esc_url($image2['url']); ?>" alt="<?php echo esc_attr($image2['alt']); ?>" class="w-full aspect-square object-cover"/>
+                <img src="<?php echo esc_url($image2['url']); ?>" alt="<?php echo esc_attr($image2['alt']); ?>" class="w-full aspect-square object-cover" />
             <?php endif;
             $image3 = get_field('immagine_3_single');
             if (!empty($image3)) : ?>
-                <img src="<?php echo esc_url($image3['url']); ?>" alt="<?php echo esc_attr($image3['alt']); ?>" class="w-full aspect-square object-cover"/>
+                <img src="<?php echo esc_url($image3['url']); ?>" alt="<?php echo esc_attr($image3['alt']); ?>" class="w-full aspect-square object-cover" />
             <?php endif; ?>
         </div>
     </section>
@@ -50,7 +50,7 @@
                     <ul class="splide__list">
                         <?php foreach ($images_single as $image_id_single) : ?>
                             <li class="splide__slide">
-                                <?php echo wp_get_attachment_image($image_id_single, $size_single, "", ["class" => "object-cover", "alt" => "some"]); ?>
+                                <?php echo wp_get_attachment_image($image_id_single, $size_single, "", ["class" => "object-cover min-h-full", "alt" => "some"]); ?>
                             </li>
                         <?php endforeach; ?>
                     </ul>
@@ -61,7 +61,7 @@
                 <div class="my-slider-progress-bar"></div>
             </div>
             <!-- Custom Arrow -->
-            <div class="splide__arrows">
+            <div class="lg:block hidden splide__arrows">
                 <button class="splide__arrow splide__arrow--prev z-40">
                     <img src="<?php echo get_template_directory_uri() . '/assets/img/arrowsx.svg'; ?>" class="h-12"></img>
                 </button>
@@ -69,9 +69,8 @@
                     <img src="<?php echo get_template_directory_uri() . '/assets/img/arrowdx.svg'; ?>" class="h-12"></img>
                 </button>
             </div>
-            <span class="absolute w-px bg-brown-aran top-0" style="height: 400px; left: 17%;"></span>
-            <span class="absolute w-px bg-brown-aran top-0" style="height: 400px; right: 17%;"></span>
-        </div>
+            <span class="slider__line absolute w-px h-[472px] bg-brown-aran top-0 z-10"></span>
+            <span class="slider__line2 absolute w-px h-[472px] bg-brown-aran top-0 z-10"></span>
 
     </section>
 

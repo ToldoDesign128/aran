@@ -45,7 +45,7 @@
                 <div class="m-auto my-4" id="calendar" required></div>
 
                 <div class="w-full my-4">
-                    <select class="w-full text-center" name="orari" id="orari">
+                    <select class="w-full text-center" placeholder="Orari" name="orari" id="orari">
                         <option value="orario 1">orario 1</option>
                         <option value="orario 2">orario 2</option>
                         <option value="orario 3">orario 3</option>
@@ -53,16 +53,20 @@
                         <option value="orario 5">orario 5</option>
                         <option value="orario 6">orario 6</option>
                     </select>
-                </div>                
+                </div>
 
-                <input type="submit" value="Step sucessivo">
+                <div class="w-full flex flex-row justify-between my-8">
+                    <button type="button" class="lg:w-[48.5%] uppercase font-sm tracking-wider text-center border border-dark-aran py-4 px-8 lg:hover:bg-dark-aran lg:hover:border-white lg:hover:text-white transition-all">Step precedente</button>
+                    <button type="button" class="lg:w-[48.5%] uppercase font-sm tracking-wider text-center border border-dark-aran py-4 px-8 lg:hover:bg-dark-aran lg:hover:border-white lg:hover:text-white transition-all">Step sucessivo</button>
+                </div>
+
 
             </div>
             <!-- Terzo step -->
             <div class="tab-form lg:max-w-[60%] max-w-none flex flex-col justify-between mx-auto lg:my-8 my-16">
                 <!-- Ambiente -->
                 <div class="w-full my-4">
-                    <select class="w-full text-center" name="environments" id="environments" multiple="multiple">
+                    <select class="w-full text-center" placeholder="Ambienti" name="environments" id="environments" multiple="multiple">
                         <option value="ambiente 1">Ambiente 1</option>
                         <option value="ambiente 2">Ambiente 2</option>
                         <option value="ambiente 3">Ambiente 3</option>
@@ -82,7 +86,7 @@
 
                 <!-- Shop id -->
                 <input type="hidden">
-
+                <!-- Submit -->
                 <input type="submit">
 
             </div>
@@ -139,7 +143,10 @@
                 settings: {
                     range: {
                         disablePast: true,
-                    }
+                    },
+                    visibility: {
+                        theme: 'light',
+                    },
                 },
                 CSSClasses: {
                     arrow: 'vanilla-calendar-arrow',

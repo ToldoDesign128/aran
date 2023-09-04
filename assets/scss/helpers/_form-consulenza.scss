@@ -9,7 +9,60 @@
   button:focus {
     outline: none;
   }
-  .vanilla-calendar-month, .vanilla-calendar-year{
-    font-family: 'Bodoni Moda', serif;
+  .vanilla-calendar {
+    background-color: white;
+
+    .vanilla-calendar-header {
+      &__content {
+        color: black;
+      }
+    }
+    .vanilla-calendar-month,
+    .vanilla-calendar-year {
+      color: black;
+      font-family: "Bodoni Moda", serif;
+    }
+    .vanilla-calendar-week {
+      color: black;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+
+      &__day {
+        color: black;
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+          "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+          "Noto Color Emoji";
+      }
+    }
+    .vanilla-calendar-day {
+      &__btn {
+        border-radius: 0;
+        &_selected {
+          background-color: #DEDEDE;
+        }
+      }
+    }
+  }
+  .ms-choice {
+    text-align: center;
+    border-radius: 0;
+    border: 1px solid black;
+    padding: 2rem 0;
+
+    span {
+      padding: 1rem 0;
+    }
+  }
+  .ms-drop {
+    box-shadow: none;
+    border-radius: 0;
+    border: 1px solid black;
+
+    .ms-select-all {
+      display: none !important;
+    }
   }
 }
