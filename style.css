@@ -1355,7 +1355,7 @@ button:focus {
   display: none !important;
 }
 
-#catalogoOnline .fieldset, #catalogoCasa .fieldset {
+#catalogoOnline fieldset .gfield, #catalogoCasa fieldset .gfield {
   border-bottom: 1px solid black;
   padding: 1rem 0;
 }
