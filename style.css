@@ -1358,8 +1358,8 @@ button:focus {
   display: none !important;
 }
 
-#catalogoOnline #input_7_9_3_containerm, #catalogoOnline #input_7_9_4_container, #catalogoOnline #input_7_9_5_container, #catalogoOnline #input_7_9_6_container, #catalogoOnline #input_7_9_1_container, #catalogoOnline #field_7_1, #catalogoOnline #field_6_1,
-#catalogoCasa #input_7_9_3_containerm,
+#catalogoOnline #input_7_9_3_container, #catalogoOnline #input_7_9_4_container, #catalogoOnline #input_7_9_5_container, #catalogoOnline #input_7_9_6_container, #catalogoOnline #input_7_9_1_container, #catalogoOnline #field_7_1, #catalogoOnline #field_6_1,
+#catalogoCasa #input_7_9_3_container,
 #catalogoCasa #input_7_9_4_container,
 #catalogoCasa #input_7_9_5_container,
 #catalogoCasa #input_7_9_6_container,
