@@ -1,12 +1,13 @@
     <!-- Form -->
     <section class="2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md md:px-8 px-4 mx-auto lg:py-24 py-12 flex flex-col items-center">
-        <h5 class="xl:text-5xl lg:text-4xl text-3xl font-serif uppercase lg:mt-24 mt-12 text-center">RICHIEDI IL CATALOGO 2023</h5>
+        <h5 class="xl:text-5xl lg:text-4xl text-3xl font-serif uppercase lg:mt-24 mt-12 mb-8 text-center">RICHIEDI IL CATALOGO 2023</h5>
 
-        <form id="FormConsulenza" action="">
+        <form id="FormConsulenza" class="w-full" action="">
 
             <!-- Primo step -->
-            <div class="tab-form flex lg:flex-row flex-col justify-between lg:my-8 my-16">
-                <button class="nextBtn lg:w-custom-32 w-full flex flex-col justify-between py-8 px-6 border border-dark-aran text-center items-center" onclick="nextPrev(1)">
+            <div id="stepUnoConsulenza" class="flex lg:flex-row flex-col justify-between lg:my-8 my-16">
+
+                <button type="button" value="Appuntamento" class="nextBtn lg:w-custom-32 w-full flex flex-col justify-between py-8 px-6 border border-dark-aran text-center items-center">
                     <img src="<?php echo get_template_directory_uri() . '/assets/img/consulenza/store.svg'; ?>" alt="" class="w-10 m-auto my-6">
                     <?php
                     $card_1_consulenza = get_field('card_1_consulenza');
@@ -17,7 +18,8 @@
 
                     <img src="<?php echo get_template_directory_uri() . '/assets/img/catalogo_arrow.svg'; ?>" alt="" class="w-6 m-auto my-6">
                 </button>
-                <button class="nextBtn lg:w-custom-32 w-full lg:mt-0 mt-4 py-8 px-12 flex flex-col justify-between border border-dark-aran text-center items-center" onclick="nextPrev(1)">
+
+                <button type="button" value="Videoconferenza" class="nextBtn lg:w-custom-32 w-full lg:mt-0 mt-4 py-8 px-12 flex flex-col justify-between border border-dark-aran text-center items-center">
                     <img src="<?php echo get_template_directory_uri() . '/assets/img/consulenza/cam.svg'; ?>" alt="" class="w-10 m-auto my-6">
                     <?php
                     $card_2_consulenza = get_field('card_2_consulenza');
@@ -27,7 +29,8 @@
                     <?php endif; ?>
                     <img src="<?php echo get_template_directory_uri() . '/assets/img/catalogo_arrow.svg'; ?>" alt="" class="w-6 m-auto my-6">
                 </button>
-                <button class="nextBtn lg:w-custom-32 w-full lg:mt-0 mt-4 py-8 px-12 flex flex-col justify-between border border-dark-aran text-center items-center" onclick="nextPrev(1)">
+
+                <button type="button" value="Consulenza" class="nextBtn lg:w-custom-32 w-full lg:mt-0 mt-4 py-8 px-12 flex flex-col justify-between border border-dark-aran text-center items-center">
                     <img src="<?php echo get_template_directory_uri() . '/assets/img/consulenza/tel.svg'; ?>" alt="" class="w-10 m-auto my-6">
                     <?php
                     $card_3_consulenza = get_field('card_3_consulenza');
@@ -40,7 +43,7 @@
             </div>
 
             <!-- Secondo step -->
-            <div class="tab-form lg:max-w-[60%] max-w-none flex flex-col justify-between mx-auto lg:my-8 my-16">
+            <div id="stepDueConsulenza" class="hidden lg:max-w-[60%] max-w-none flex-col justify-between mx-auto lg:my-8 my-16">
                 <!-- Data -->
                 <div class="m-auto my-4" id="calendar" required></div>
 
@@ -56,14 +59,14 @@
                 </div>
 
                 <div class="w-full flex flex-row justify-between my-8">
-                    <button type="button" class="lg:w-[48.5%] uppercase font-sm tracking-wider text-center border border-dark-aran py-4 px-8 lg:hover:bg-dark-aran lg:hover:border-white lg:hover:text-white transition-all">Step precedente</button>
-                    <button type="button" class="lg:w-[48.5%] uppercase font-sm tracking-wider text-center border border-dark-aran py-4 px-8 lg:hover:bg-dark-aran lg:hover:border-white lg:hover:text-white transition-all">Step sucessivo</button>
+                    <button type="button" class="prevBtn lg:w-[48.5%] uppercase font-sm tracking-wider text-center border border-dark-aran py-4 px-8 lg:hover:bg-dark-aran lg:hover:border-white lg:hover:text-white transition-all">Step precedente</button>
+                    <button type="button" class="nextBtnDue lg:w-[48.5%] uppercase font-sm tracking-wider text-center border border-dark-aran py-4 px-8 lg:hover:bg-dark-aran lg:hover:border-white lg:hover:text-white transition-all">Step sucessivo</button>
                 </div>
 
 
             </div>
             <!-- Terzo step -->
-            <div class="tab-form lg:max-w-[60%] max-w-none flex flex-col justify-between mx-auto lg:my-8 my-16">
+            <div id="stepTreConsulenza" class="hidden lg:max-w-[60%] max-w-none flex-col justify-between mx-auto lg:my-8 my-16">
                 <!-- Ambiente -->
                 <div class="w-full my-4">
                     <select class="w-full text-center" placeholder="Ambienti" name="environments" id="environments" multiple="multiple">
@@ -87,92 +90,11 @@
                 <!-- Shop id -->
                 <input type="hidden">
                 <!-- Submit -->
-                <input type="submit">
-
+                <div class="w-full flex flex-row justify-between my-8">
+                    <button type="button" class="prevBtnDue lg:w-[48.5%] uppercase font-sm tracking-wider text-center border border-dark-aran py-4 px-8 lg:hover:bg-dark-aran lg:hover:border-white lg:hover:text-white transition-all">Step precedente</button>
+                    <button type="submit" class="lg:w-[48.5%] uppercase font-sm tracking-wider text-center border border-dark-aran py-4 px-8 lg:hover:bg-dark-aran lg:hover:border-white lg:hover:text-white transition-all">Invia</button>
+                </div>
             </div>
         </form>
     </section>
-    <script>
-        jQuery("#FormConsulenza").validate();
-        jQuery('select').multipleSelect();
-
-        let dateTomorrow = new Date();
-
-        function getNextDate(date) {
-            var d = new Date(date);
-            d.setDate(d.getDate() + 1); // Aggiunge un giorno alla data corrente
-
-            var month = '' + (d.getMonth() + 1),
-                day = '' + d.getDate(),
-                year = d.getFullYear();
-
-            if (month.length < 2)
-                month = '0' + month;
-            if (day.length < 2)
-                day = '0' + day;
-
-            return [day, month, year].join('-');
-        }
-
-        // data in formato dd-mm-yy
-        let dateTomorrowCalendar = getNextDate(dateTomorrow);
-
-        // data in formato mm-dd-yy per vanilla calendar
-        function convertiFormatoData(data) {
-            // Dividi la stringa di data in un array di stringhe
-            var partiData = data.split('-');
-
-            // Riorganizza le parti della data nel formato desiderato
-            var dataConvertita = partiData[1] + '-' + partiData[0] + '-' + partiData[2];
-
-            return dataConvertita;
-        }
-
-        dataCalendario = convertiFormatoData(dateTomorrowCalendar);
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const options = {
-                actions: {
-                    clickDay(event, dates) {
-                        const selectedDate = dates;
-
-                        console.log(selectedDate);
-                    },
-                },
-                date: {
-                    today: new Date(dataCalendario),
-                },
-                settings: {
-                    range: {
-                        disablePast: true,
-                    },
-                    visibility: {
-                        theme: 'light',
-                    },
-                },
-                CSSClasses: {
-                    arrow: 'vanilla-calendar-arrow',
-                }
-            };
-            
-            
-            const calendar = new VanillaCalendar('#calendar', options);
-            calendar.init();
-        });
-
-
-        const shopID = 'A0001';
-        // let = serviceID = document.querySelector()
-
-        jQuery.get(`https://casatuaitalia.it/BookingApi/booking.php?action=getAvilability&shop_id=${shopID}&service_id=1&date_selected=31-08-2023`, function(data) {
-
-            let data2 = {
-                "status": true,
-                "data": ["10:00", "10:30", "11:00", "11:30", "12:00", "15:00", "15:30", "16:00", "16:30", "17:00", "17:30", "18:00", "18:30", "19:00", "19:30"]
-            }
-
-            jQuery(".result").html(data);
-            alert("Load was performed.");
-
-        });
-    </script>
+    <script src="<?php echo get_template_directory_uri();?>/assets/js/formConsulenza.js"></script>
