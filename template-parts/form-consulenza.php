@@ -134,7 +134,9 @@
             const options = {
                 actions: {
                     clickDay(event, dates) {
-                        console.log(dates);
+                        const selectedDate = dates;
+
+                        console.log(selectedDate);
                     },
                 },
                 date: {
@@ -152,10 +154,12 @@
                     arrow: 'vanilla-calendar-arrow',
                 }
             };
-
+            
+            
             const calendar = new VanillaCalendar('#calendar', options);
             calendar.init();
         });
+
 
         const shopID = 'A0001';
         // let = serviceID = document.querySelector()

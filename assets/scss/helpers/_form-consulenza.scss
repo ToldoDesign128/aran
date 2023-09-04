@@ -41,8 +41,11 @@
       &__btn {
         border-radius: 0;
         &_selected {
-          background-color: #DEDEDE;
+          background-color: #dedede;
         }
+      }
+      &__btn_today {
+        color: black;
       }
     }
   }

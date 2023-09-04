@@ -1335,7 +1335,10 @@ button:focus {
   border-radius: 0;
 }
 #FormConsulenza .vanilla-calendar .vanilla-calendar-day__btn_selected {
-  background-color: #DEDEDE;
+  background-color: #dedede;
+}
+#FormConsulenza .vanilla-calendar .vanilla-calendar-day__btn_today {
+  color: black;
 }
 #FormConsulenza .ms-choice {
   text-align: center;
@@ -1355,7 +1358,14 @@ button:focus {
   display: none !important;
 }
 
-#catalogoOnline fieldset .gfield, #catalogoCasa fieldset .gfield {
+#catalogoOnline #input_7_9_3_containerm, #catalogoOnline #input_7_9_4_container, #catalogoOnline #input_7_9_5_container, #catalogoOnline #input_7_9_6_container, #catalogoOnline #input_7_9_1_container, #catalogoOnline #field_7_1, #catalogoOnline #field_6_1,
+#catalogoCasa #input_7_9_3_containerm,
+#catalogoCasa #input_7_9_4_container,
+#catalogoCasa #input_7_9_5_container,
+#catalogoCasa #input_7_9_6_container,
+#catalogoCasa #input_7_9_1_container,
+#catalogoCasa #field_7_1,
+#catalogoCasa #field_6_1 {
   border-bottom: 1px solid black;
   padding: 1rem 0;
 }
